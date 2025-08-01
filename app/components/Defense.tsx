@@ -55,7 +55,7 @@ export const Defense = () => {
   return (
     <div className="text-black bg-white flex flex-col items-center relative overflow-hidden py-[120px] px-20">
       <div className="flex flex-col items-center gap-10 mb-10">
-        <h2 className="border-[#DCFCE7] bg-[#F0FDF4] border text-sm tracking-wide rounded-full px-4 py-3 uppercase">
+        <h2 className="border-[#DCFCE7] bg-[#BBF7D0] border text-sm tracking-wide rounded-full px-4 py-3 uppercase">
           WHO WE HELP
         </h2>
         <h3 className="text-5xl font-bold text-center">

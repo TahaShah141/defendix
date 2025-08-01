@@ -32,7 +32,7 @@ const newsArticles = [
 ];
 
 const NewsCard = ({ article }: { article: (typeof newsArticles)[0] }) => (
-  <div className="border border-[#ECECEC] rounded-4xl overflow-hidden">
+  <div className="border border-[#ECECEC] rounded-4xl overflow-hidden flex flex-col h-full">
     <Image
       src="/news.png"
       alt="News article"
@@ -40,18 +40,20 @@ const NewsCard = ({ article }: { article: (typeof newsArticles)[0] }) => (
       height={240}
       className="w-full h-60 object-cover"
     />
-    <div className="p-6 flex flex-col gap-4">
+    <div className="p-5 flex flex-col gap-4 flex-1">
       <p className="text-sm text-neutral-500 uppercase tracking-wide">
         {article.date}
       </p>
       <h4 className="text-xl font-semibold leading-tight">{article.title}</h4>
-      <p className="text-neutral-600 leading-relaxed">{article.description}</p>
+      <p className="text-neutral-600 leading-relaxed flex-1">
+        {article.description}
+      </p>
       <Link
         href={article.link}
-        className="text-[#167F3D] flex font-semibold gap-2 items-center mt-2"
+        className="text-[#167F3D] flex font-semibold gap-2 items-center mt-auto"
       >
         Read more
-        <ArrowRight className="size-4" />
+        <ArrowRight className="size-4 text-primary" />
       </Link>
     </div>
   </div>
@@ -79,10 +81,9 @@ export const News = () => {
 
       <Link
         href="#"
-        className="text-[#167F3D] flex font-semibold gap-2 items-center text-lg"
+        className="flex items-center justify-center gap-2.5 px-3 py-3 pr-4 rounded-xl border border-[#BBF7D0] bg-white text-primary font-semibold text-lg"
       >
         See more
-        <ArrowRight className="size-5" />
       </Link>
     </div>
   );
