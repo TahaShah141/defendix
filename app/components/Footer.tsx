@@ -1,20 +1,22 @@
-import React from "react";
+import { Mail, MapPin, Phone } from "lucide-react";
+
 import Image from "next/image";
 import Link from "next/link";
-import { Mail, Phone, MapPin } from "lucide-react";
+import React from "react";
 
 export const Footer = () => {
   return (
     <footer className="bg-black text-white flex flex-col justify-center items-start gap-10 py-[120px] px-20">
       <div className="w-full grid grid-cols-4 gap-12">
         <div className="flex flex-col gap-6">
-          <Image
+          {/* <Image
             src="/logo.png"
             alt="DefendiX Technologies"
             width={208}
             height={56}
             className="h-14 w-auto"
-          />
+          /> */}
+          <img src="/logo.png" alt="" className="w-3/5" />
           <p className="text-neutral-400 leading-relaxed">
             DefendiX Technologies delivers advanced solutions to military forces
             and defense organizations across all domains—air, sea, land, and
