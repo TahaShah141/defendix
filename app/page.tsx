@@ -2,6 +2,7 @@ import { Choose } from "./components/Choose";
 import { Hero } from "./components/Hero";
 import { Technologies } from "./components/Technologies";
 import { Defense } from "./components/Defense";
+import { CTA } from "./components/CTA";
 
 export default function LandingPage() {
   return (
@@ -10,6 +11,7 @@ export default function LandingPage() {
       <Choose />
       <Technologies />
       <Defense />
+      <CTA />
     </>
   );
 }
