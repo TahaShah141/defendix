@@ -3,7 +3,7 @@ import React from 'react'
 export const AboutHero = () => {
   return (
     <div
-      className="w-full h-[400px] bg-cover bg-[center_top_30%] flex items-center justify-center"
+      className="w-full h-[500px] bg-cover bg-[center_top_30%] flex items-center justify-center"
       style={{ backgroundImage: "url('/about-hero.png')" }}
     >
       <div className='size-full bg-black/75 pt-20 flex flex-col gap-8 justify-center items-center'>
