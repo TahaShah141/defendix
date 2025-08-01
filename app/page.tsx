@@ -6,6 +6,7 @@ import { CTA } from "./components/CTA";
 import { News } from "./components/News";
 import { FAQ } from "./components/FAQ";
 import { ContactUs } from "./components/ContactUs";
+import { Footer } from "./components/Footer";
 
 export default function LandingPage() {
   return (

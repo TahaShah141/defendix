@@ -4,7 +4,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
 import {
   Form,
   FormControl,
@@ -98,7 +98,7 @@ export const ContactUs = () => {
         </div>
 
         <div className="flex-1">
-          <div className="bg-[#167F3D] rounded-2xl p-8">
+          <div className="bg-[#167F3D] rounded-4xl p-8">
             <div className="mb-6">
               <h4 className="text-white text-xl font-semibold mb-2">
                 Complete the form below for the demo and pricing details.
@@ -123,7 +123,7 @@ export const ContactUs = () => {
                           {...field}
                           type="text"
                           placeholder="Enter name"
-                          className="w-full px-4 py-3 rounded-lg border border-white/20 bg-white/10 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50"
+                          className="w-full px-4 py-3 rounded-xl border border-white/20 bg-white/10 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50"
                         />
                       </FormControl>
                       <FormMessage className="text-red-300 text-sm" />
@@ -144,7 +144,7 @@ export const ContactUs = () => {
                           {...field}
                           type="email"
                           placeholder="Enter email address"
-                          className="w-full px-4 py-3 rounded-lg border border-white/20 bg-white/10 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50"
+                          className="w-full px-4 py-3 rounded-xl border border-white/20 bg-white/10 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50"
                         />
                       </FormControl>
                       <FormMessage className="text-red-300 text-sm" />
@@ -165,7 +165,7 @@ export const ContactUs = () => {
                           {...field}
                           type="tel"
                           placeholder="Enter phone number"
-                          className="w-full px-4 py-3 rounded-lg border border-white/20 bg-white/10 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50"
+                          className="w-full px-4 py-3 rounded-xl border border-white/20 bg-white/10 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50"
                         />
                       </FormControl>
                       <FormMessage className="text-red-300 text-sm" />
@@ -186,7 +186,7 @@ export const ContactUs = () => {
                           {...field}
                           rows={4}
                           placeholder="Enter message"
-                          className="w-full px-4 py-3 rounded-lg border border-white/20 bg-white/10 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50 resize-none"
+                          className="w-full px-4 py-3 rounded-xl border border-white/20 bg-white/10 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50 resize-none"
                         />
                       </FormControl>
                       <FormMessage className="text-red-300 text-sm" />
@@ -197,10 +197,10 @@ export const ContactUs = () => {
                 <Button
                   type="submit"
                   disabled={form.formState.isSubmitting}
-                  className="w-full bg-white text-[#167F3D] py-3 px-6 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-gray-100 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full bg-white text-[#167F3D] py-3 px-6 rounded-xl font-semibold flex items-center justify-center gap-2 hover:bg-gray-100 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {form.formState.isSubmitting ? "Sending..." : "Send message"}
-                  <Send className="size-4" />
+                  <ArrowRight className="size-4" />
                 </Button>
               </form>
             </Form>
