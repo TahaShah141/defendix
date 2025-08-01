@@ -1,8 +1,6 @@
 import { Edit, Lock, ShieldCheck, Star } from 'lucide-react';
 import React, { ReactNode } from 'react'
 
-import PasscodeLock from '@/public/passcode-lock.svg'
-
 type CardProps = {
   icon: ReactNode;
   title: string;
