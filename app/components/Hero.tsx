@@ -26,19 +26,19 @@ export const Hero = () => {
           </div>
           <div className='relative flex justify-between items-center p-12 py-16'>
             <div className='absolute right-1/10 top-0 w-4/5 h-px bg-gradient-to-r from-transparent via-neutral-500 to-transparent' />
-            <div className='flex flex-col items-center'>
-              <p className='text-6xl'>20+</p>
-              <p className='text-white/75 text-xl'>Years Combined Experience</p>
+            <div className='flex flex-1 flex-col gap-1 items-center'>
+              <p className='text-5xl'>20+</p>
+              <p className='text-white/75 text-2xl'>Years Combined Experience</p>
             </div>
             <div className='h-4/5 w-px bg-neutral-500' />
-            <div className='flex flex-col items-center'>
-              <p className='text-6xl'>20+</p>
-              <p className='text-white/75 text-xl'>Years Combined Experience</p>
+            <div className='flex flex-1 flex-col gap-1 items-center'>
+              <p className='text-5xl'>5</p>
+              <p className='text-white/75 text-2xl'>Core Technology Areas</p>
             </div>
             <div className='h-4/5 w-px bg-neutral-500' />
-            <div className='flex flex-col items-center'>
-              <p className='text-6xl'>20+</p>
-              <p className='text-white/75 text-xl'>Years Combined Experience</p>
+            <div className='flex flex-1 flex-col gap-1 items-center'>
+              <p className='text-5xl'>Global</p>
+              <p className='text-white/75 text-2xl'>Deployment Reach</p>
             </div>
             <div className='absolute right-1/10 bottom-0 w-4/5 h-px bg-gradient-to-r from-transparent via-neutral-500 to-transparent' />
           </div>
