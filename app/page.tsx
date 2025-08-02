@@ -1,12 +1,11 @@
-import { Choose } from "./components/Choose";
-import { Hero } from "./components/Hero";
-import { Technologies } from "./components/Technologies";
-import { Defense } from "./components/Defense";
-import { CTA } from "./components/CTA";
-import { News } from "./components/News";
-import { FAQ } from "./components/FAQ";
-import { ContactUs } from "./components/ContactUs";
-import { Footer } from "./components/Footer";
+import { Choose } from "./components/Landing-Page/Choose";
+import { Hero } from "./components/Landing-Page/Hero";
+import { Technologies } from "./components/Landing-Page/Technologies";
+import { Defense } from "./components/Landing-Page/Defense";
+import { CTA } from "./components/Landing-Page/CTA";
+import { News } from "./components/Landing-Page/News";
+import { FAQ } from "./components/Landing-Page/FAQ";
+import { ContactUs } from "./components/Shared/ContactUs";
 
 export default function LandingPage() {
   return (

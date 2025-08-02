@@ -26,7 +26,11 @@ const contactSchema = z.object({
 
 type ContactFormData = z.infer<typeof contactSchema>;
 
-export const ContactUs = () => {
+type ContactUsProps = {
+  showPill?: boolean;
+};
+
+export const ContactUs = ({ showPill = true }: ContactUsProps) => {
   const form = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
     defaultValues: {
@@ -49,16 +53,18 @@ export const ContactUs = () => {
 
   return (
     <div className="bg-white text-black px-20 py-[120px]">
-      <div className="flex flex-col items-center gap-10 mb-10">
-        <h2 className="border-[#DCFCE7] bg-[#F0FDF4] border text-sm tracking-wide rounded-full px-4 py-3 uppercase">
-          GET IN TOUCH
-        </h2>
-        <h3 className="text-5xl font-bold text-center">Contact us</h3>
-        <p className="text-center max-w-4xl text-lg text-neutral-700">
-          We'd love to hear from you! Reach out to us with your inquiries,
-          partnership opportunities, or any questions you may have.
-        </p>
-      </div>
+      {showPill && (
+        <div className="flex flex-col items-center gap-10 mb-10">
+          <h2 className="border-[#DCFCE7] bg-[#F0FDF4] border text-sm tracking-wide rounded-full px-4 py-3 uppercase">
+            GET IN TOUCH
+          </h2>
+          <h3 className="text-5xl font-bold text-center">Contact us</h3>
+          <p className="text-center max-w-4xl text-lg text-neutral-700">
+            We'd love to hear from you! Reach out to us with your inquiries,
+            partnership opportunities, or any questions you may have.
+          </p>
+        </div>
+      )}
 
       <div className="flex gap-16 max-w-7xl mx-auto">
         <div className="flex-1 flex flex-col gap-8">
