@@ -18,7 +18,11 @@ export const CTA = ({ isProduct = false }: CTAProps) => {
             className="object-cover"
           />
         )}
-        <div className="absolute inset-0 bg-black/70 rounded-[120px]" />
+        <div
+          className={`absolute inset-0  ${
+            isProduct ? "" : "bg-black/70"
+          } rounded-[120px]`}
+        />
 
         <div className="relative z-10 flex flex-col items-center text-center text-white py-[120px] px-[120px]">
           <h2 className="text-5xl font-bold mb-10">
@@ -31,7 +35,6 @@ export const CTA = ({ isProduct = false }: CTAProps) => {
           <div className="flex gap-6">
             <Link
               href="#"
-              //if product is true use this color #F0FDF4 for background
               className={`${
                 isProduct
                   ? "bg-[#F0FDF4] text-primary"
