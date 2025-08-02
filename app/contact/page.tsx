@@ -1,6 +1,5 @@
 import { ContactUs } from "../components/Shared/ContactUs";
-import { Founders } from "../components/About/Founders";
-import { Values } from "../components/About/Values";
+
 import { ContactHero } from "../components/Contact-Us/Contact-Hero";
 export default function ContactPage() {
   return (

@@ -31,7 +31,12 @@ export const CTA = ({ isProduct = false }: CTAProps) => {
           <div className="flex gap-6">
             <Link
               href="#"
-              className="bg-[#167F3D] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#16a34a] transition-colors duration-200"
+              //if product is true use this color #F0FDF4 for background
+              className={`${
+                isProduct
+                  ? "bg-[#F0FDF4] text-primary"
+                  : "bg-[#167F3D] text-white"
+              } px-8 py-4 rounded-lg font-semibold hover:bg-[#16a34a] transition-colors duration-200`}
             >
               Explore our services
               <ArrowRight className="inline size-6 ml-2" />
