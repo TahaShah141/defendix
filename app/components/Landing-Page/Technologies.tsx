@@ -50,7 +50,7 @@ const cards: CardProps[] = [
       "Multi-Sensor Function",
       "Threat Evaluation & Weapon Assignment"
     ],
-    link: "#",
+    link: "/services/c4isr",
     src: "/technologies/c4isr.png"
   },
   {
@@ -62,7 +62,7 @@ const cards: CardProps[] = [
       "Fast Frequency Hopping",
       "Quantum-Safe Encryption"
     ],
-    link: "#",
+    link: "/services/sdr",
     src: "/technologies/radio.png"
   },
   {
@@ -74,7 +74,7 @@ const cards: CardProps[] = [
       "Threat Suppression",
       "Signal Analysis"
     ],
-    link: "#",
+    link: "/services/ew",
     src: "/technologies/warfare.png"
   },
   {
@@ -86,7 +86,7 @@ const cards: CardProps[] = [
       "Beamforming Controllers",
       "Multi-Function Capabilities"
     ],
-    link: "#",
+    link: "/services/part",
     src: "/technologies/radar.png"
   },
   {
@@ -98,7 +98,7 @@ const cards: CardProps[] = [
       "High-Speed Processing",
       "Modular Architecture"
     ],
-    link: "#",
+    link: "/services/rcpp",
     src: "/technologies/platforms.png"
   },
 ]
