@@ -1,10 +1,6 @@
 "use client";
 
-import React from "react";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
-import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
+import { ArrowRight, Mail, MapPin, Phone } from "lucide-react";
 import {
   Form,
   FormControl,
@@ -13,9 +9,14 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import React from "react";
+import { Textarea } from "@/components/ui/textarea";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
 
 const contactSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -60,8 +61,7 @@ export const ContactUs = ({ showPill = true }: ContactUsProps) => {
           </h2>
           <h3 className="text-5xl font-bold text-center">Contact us</h3>
           <p className="text-center max-w-4xl text-lg text-neutral-700">
-            We'd love to hear from you! Reach out to us with your inquiries,
-            partnership opportunities, or any questions you may have.
+            {"We'd love to hear from you! Reach out to us with your inquiries, partnership opportunities, or any questions you may have."}
           </p>
         </div>
       )}

@@ -13,7 +13,7 @@ const Card = ({icon, points, title}: ServiceType['capabilities'][0]) => {
       </div>
       <div className='flex flex-col gap-4'>
         {points.map((p, i) => (
-          <div className={`flex gap-3 ${p.type === 'list' && "justify-between"} items-center`}>
+          <div key={i} className={`flex gap-3 ${p.type === 'list' && "justify-between"} items-center`}>
             {p.type === "list" ? (
               <>
               <p className='font-bold'>{p.name}</p>
