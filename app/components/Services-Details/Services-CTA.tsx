@@ -1,7 +1,7 @@
-import React from "react";
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import React from "react";
 import { ServiceType } from "@/lib/services";
 
 export const ServicesCTA = ({ title, description }: ServiceType["CTA"]) => {
@@ -13,7 +13,7 @@ export const ServicesCTA = ({ title, description }: ServiceType["CTA"]) => {
           <p className="text-xl text-white/90 max-w-3xl mb-10">{description}</p>
           <div className="flex gap-6">
             <Link
-              href="#"
+              href="/contact"
               className="bg-[#F0FDF4] text-primary px-8 py-4 rounded-lg font-semibold hover:bg-[#16a34a] transition-colors duration-200"
             >
               Schedule Technical Consultation

@@ -22,7 +22,7 @@ export const Hero = () => {
               }
             </p>
             <Link
-              href={"#"}
+              href={"/services"}
               className="bg-primary p-2 pl-4 rounded-lg group text-black w-fit flex gap-4 items-center"
             >
               Explore our products & solutions

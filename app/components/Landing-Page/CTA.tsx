@@ -1,7 +1,7 @@
-import React from "react";
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import React from "react";
 
 type CTAProps = {
   isProduct?: boolean;
@@ -34,19 +34,19 @@ export const CTA = ({ isProduct = false }: CTAProps) => {
           </p>
           <div className="flex gap-6">
             <Link
-              href="#"
+              href="/services"
               className={`${
                 isProduct
                   ? "bg-[#F0FDF4] text-primary"
                   : "bg-[#167F3D] text-white"
-              } px-8 py-4 rounded-lg font-semibold hover:bg-[#16a34a] transition-colors duration-200`}
+              } px-8 py-4 rounded-2xl font-semibold hover:bg-[#16a34a] transition-colors duration-200`}
             >
               Explore our services
               <ArrowRight className="inline size-6 ml-2" />
             </Link>
             <Link
-              href="#"
-              className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-black transition-colors duration-200"
+              href="/contact"
+              className="border border-white text-white px-8 py-4 rounded-2xl font-semibold hover:bg-white hover:text-black transition-colors duration-200"
             >
               Contact us
             </Link>

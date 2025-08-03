@@ -39,19 +39,19 @@ export const Footer = () => {
             Software Defined Radio
           </Link>
           <Link
-            href="#"
+            href="/services/ew"
             className="text-neutral-400 hover:text-white transition-colors"
           >
             Electronic Warfare
           </Link>
           <Link
-            href="#"
+            href="/services/part"
             className="text-neutral-400 hover:text-white transition-colors"
           >
             Phased Array Radar
           </Link>
           <Link
-            href="#"
+            href="/services/rcpp"
             className="text-neutral-400 hover:text-white transition-colors"
           >
             Control Platforms
@@ -61,13 +61,13 @@ export const Footer = () => {
         <div className="flex flex-col gap-4">
           <h4 className="text-lg font-semibold mb-2">Company</h4>
           <Link
-            href="#"
+            href="/about"
             className="text-neutral-400 hover:text-white transition-colors"
           >
             About Us
           </Link>
           <Link
-            href="#"
+            href="/news"
             className="text-neutral-400 hover:text-white transition-colors"
           >
             News & Insights
@@ -79,7 +79,7 @@ export const Footer = () => {
             Careers
           </Link>
           <Link
-            href="#"
+            href="/contact"
             className="text-neutral-400 hover:text-white transition-colors"
           >
             Contact

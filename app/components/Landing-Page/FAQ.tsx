@@ -1,13 +1,14 @@
 "use client";
 
-import React from "react";
-import Link from "next/link";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+
+import Link from "next/link";
+import React from "react";
 
 const faqData = [
   {
@@ -58,23 +59,24 @@ export const FAQ = () => {
           and services.
         </p>
       </div>
-
-      <Accordion type="multiple" className=" w-full pb-6">
-        {faqData.map((faq) => (
-          <AccordionItem
+      <div className="w-full">
+        <Accordion type="multiple" className="flex flex-col gap-6">
+          {faqData.map((faq) => (
+            <AccordionItem
             key={faq.id}
             value={faq.id}
-            className="flex flex-col  gap-6 p-6 rounded-[20px] border-2 border-[#ECECEC] data-[state=open]:border-[#17A249] data-[state=open]:bg-[#F7FDFB] mb-6 "
-          >
-            <AccordionTrigger className="w-full flex  text-lg font-semibold text-left hover:no-underline">
-              {faq.question}
-            </AccordionTrigger>
-            <AccordionContent className="w-full text-neutral-700 leading-relaxed">
-              {faq.answer}
-            </AccordionContent>
-          </AccordionItem>
-        ))}
-      </Accordion>
+            className="flex flex-col gap-2 p-4 rounded-[20px] border-2 border-[#ECECEC] data-[state=open]:border-[#17A249] data-[state=open]:bg-[#F7FDFB] "
+            >
+              <AccordionTrigger className="w-full flex text-xl font-semibold text-left hover:no-underline">
+                {faq.question}
+              </AccordionTrigger>
+              <AccordionContent className="w-full text-neutral-700 text-lg leading-relaxed">
+                {faq.answer}
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
+      </div>
 
       <div className="mt-10">
         <Link
