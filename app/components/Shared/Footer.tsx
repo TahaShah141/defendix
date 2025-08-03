@@ -27,13 +27,13 @@ export const Footer = () => {
         <div className="flex flex-col gap-4">
           <h4 className="text-lg font-semibold mb-2">Solutions</h4>
           <Link
-            href="#"
+            href="/services/c4isr"
             className="text-neutral-400 hover:text-white transition-colors"
           >
             C4ISR Systems
           </Link>
           <Link
-            href="#"
+            href="/services/sdr"
             className="text-neutral-400 hover:text-white transition-colors"
           >
             Software Defined Radio

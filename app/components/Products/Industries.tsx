@@ -1,7 +1,7 @@
-import React from "react";
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import React from "react";
 
 const industries = [
   {
@@ -43,7 +43,7 @@ const industries = [
 ];
 
 const IndustryCard = ({ industry }: { industry: (typeof industries)[0] }) => (
-  <div className="border border-[#ECECEC] rounded-4xl overflow-hidden flex flex-col h-full">
+  <div className="border border-[#ECECEC] bg-[#F8F8F8] rounded-4xl overflow-hidden flex flex-col h-full">
     <div className="p-5 flex flex-col gap-4 flex-1">
       <h4 className="text-xl font-semibold leading-tight">{industry.title}</h4>
       <p className="text-neutral-600 leading-relaxed flex-1">

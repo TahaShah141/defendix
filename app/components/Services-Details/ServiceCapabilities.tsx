@@ -4,7 +4,7 @@ import { ServiceType } from '@/lib/services'
 
 const Card = ({icon, points, title}: ServiceType['capabilities'][0]) => {
   return (
-    <div className='p-14 rounded-3xl border border-[#ECECEC] shadow-xl flex flex-col gap-10'>
+    <div className='p-14 flex-1 rounded-3xl border border-[#ECECEC] shadow-xl flex flex-col gap-10'>
       <div className='flex gap-2 items-center'>
         <div className='size-8'>
           {icon}
@@ -36,7 +36,7 @@ export const ServiceCapabilities = ({ capabilities }: {capabilities: ServiceType
   return (
     <div className='bg-white text-black flex flex-col gap-12 py-32 items-center'>
       <h3 className='text-center text-5xl max-w-5xl'>{"Technical Capabilities"}</h3>
-      <div className='flex gap-10'>
+      <div className='flex w-4/5 gap-10'>
         {capabilities.map((c, i) => (
           <Card {...c} key={i} />
         ))}

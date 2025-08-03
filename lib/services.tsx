@@ -271,7 +271,7 @@ const SDRService: ServiceType = {
   },
   modules: [
     {
-      src: "/services/c4isr/modules/0.png",
+      src: "/services/sdr/modules/0.png",
       icon: <ShieldCheck className="size-full" />,
       title: "Multiband Operation",
       text: "Operates across VHF, IJHF, L, and S bands, enabling a single platform to handle diverse mission requirements.",
@@ -285,7 +285,7 @@ const SDRService: ServiceType = {
       ],
     },
     {
-      src: "/services/c4isr/modules/1.png",
+      src: "/services/sdr/modules/1.png",
       icon: <ShieldCheck className="size-full" />,
       title: "Fast Frequency Hopping",
       text: "High-speed frequency hopping for robust anti-jam and low-probability-of-intercept (LPI) communication.",
@@ -299,7 +299,7 @@ const SDRService: ServiceType = {
       ],
     },
     {
-      src: "/services/c4isr/modules/2.png",
+      src: "/services/sdr/modules/2.png",
       icon: <ShieldCheck className="size-full" />,
       title: "GPS-Based Synchronization",
       text: "Precise time and frequency alignment across distributed nodes using GPS-disciplined oscillators.",
@@ -313,7 +313,7 @@ const SDRService: ServiceType = {
       ],
     },
     {
-      src: "/services/c4isr/modules/3.png",
+      src: "/services/sdr/modules/3.png",
       icon: <ShieldCheck className="size-full" />,
       title: "Custom Waveform Support",
       text: "Field-programmable to deploy and run proprietary or mission-specific waveforms.",
@@ -327,7 +327,7 @@ const SDRService: ServiceType = {
       ],
     },
     {
-      src: "/services/c4isr/modules/4.png",
+      src: "/services/sdr/modules/4.png",
       icon: <ShieldCheck className="size-full" />,
       title: "Multi-Domain Communication",
       text: "Enables ground-to-ground (G2G), ground-to-air (G2A), and air-to-air (A2A) connectivity.",
@@ -341,7 +341,7 @@ const SDRService: ServiceType = {
       ],
     },
     {
-      src: "/services/c4isr/modules/5.png",
+      src: "/services/sdr/modules/5.png",
       icon: <ShieldCheck className="size-full" />,
       title: "Advanced Security",
       text: "Advanced encryption algorithms and quantum-safe key exchange for maximum security.",
@@ -438,7 +438,7 @@ const EWService: ServiceType = {
   },
   modules: [
     {
-      src: "/services/c4isr/modules/0.png",
+      src: "/services/ew/modules/0.png",
       icon: <ShieldCheck className="size-full" />,
       title: "ELINT (Electronic Intelligence)",
       text: "Advanced electronic intelligence gathering and analysis systems for comprehensive threat assessment.",
@@ -452,7 +452,7 @@ const EWService: ServiceType = {
       ],
     },
     {
-      src: "/services/c4isr/modules/1.png",
+      src: "/services/ew/modules/1.png",
       icon: <ShieldCheck className="size-full" />,
       title: "Signal Intelligence Gathering",
       text: "Sophisticated signal collection and processing systems for battlefield intelligence.",
@@ -466,7 +466,7 @@ const EWService: ServiceType = {
       ],
     },
     {
-      src: "/services/c4isr/modules/2.png",
+      src: "/services/ew/modules/2.png",
       icon: <ShieldCheck className="size-full" />,
       title: "Threat Detection & Analysis",
       text: "Real-time threat detection with advanced analysis capabilities for immediate response.",
@@ -480,7 +480,7 @@ const EWService: ServiceType = {
       ],
     },
     {
-      src: "/services/c4isr/modules/3.png",
+      src: "/services/ew/modules/3.png",
       icon: <ShieldCheck className="size-full" />,
       title: "Electronic Protection",
       text: "Comprehensive electronic protection measures against enemy EW systems.",
@@ -571,7 +571,7 @@ const PARTService: ServiceType = {
   },
   modules: [
     {
-      src: "/services/c4isr/modules/0.png",
+      src: "/services/part/modules/0.png",
       icon: <ShieldCheck className="size-full" />,
       title: "Transmit/Receive (T/R) Modules",
       text: "Foundational building blocks of modern phased array radar systems, delivering high performance across multiple frequency bands.",
@@ -585,7 +585,7 @@ const PARTService: ServiceType = {
       ],
     },
     {
-      src: "/services/c4isr/modules/1.png",
+      src: "/services/part/modules/1.png",
       icon: <ShieldCheck className="size-full" />,
       title: "Phased Array Antennas",
       text: "Active electronically scanned array (AESA) antennas optimized for multi-function radar missions with rapid electronic beam steering.",
@@ -599,7 +599,7 @@ const PARTService: ServiceType = {
       ],
     },
     {
-      src: "/services/c4isr/modules/2.png",
+      src: "/services/part/modules/2.png",
       icon: <ShieldCheck className="size-full" />,
       title: "Beamforming Controller",
       text: "Intelligence behind the phased array, coordinating phase and amplitude settings for real-time electronically steered beams.",
@@ -613,7 +613,7 @@ const PARTService: ServiceType = {
       ],
     },
     {
-      src: "/services/c4isr/modules/3.png",
+      src: "/services/part/modules/3.png",
       icon: <ShieldCheck className="size-full" />,
       title: "Control & Signal Processing",
       text: "High-speed FPGAs and host processors in ruggedized backplane for comprehensive radar signal processing.",
@@ -627,7 +627,7 @@ const PARTService: ServiceType = {
       ],
     },
     {
-      src: "/services/c4isr/modules/4.png",
+      src: "/services/part/modules/4.png",
       icon: <ShieldCheck className="size-full" />,
       title: "Man-Machine Interface (MMI)",
       text: "Intuitive and mission-configurable interfaces providing operators with real-time situational awareness and full radar control.",
@@ -641,7 +641,7 @@ const PARTService: ServiceType = {
       ],
     },
     {
-      src: "/services/c4isr/modules/5.png",
+      src: "/services/part/modules/5.png",
       icon: <ShieldCheck className="size-full" />,
       title: "Passive RF Modules",
       text: "Precision-engineered combiners and splitters for signal distribution across high-density T/R modules.",
@@ -735,7 +735,7 @@ const RCPPService: ServiceType = {
   },
   modules: [
     {
-      src: "/services/c4isr/modules/0.png",
+      src: "/services/rcpp/modules/0.png",
       icon: <ShieldCheck className="size-full" />,
       title: "OpenVPX-Based Backplane",
       text: "High-speed, ruggedized OpenVPX backplane designed for defense-grade reliability and modular scalability.",
@@ -749,7 +749,7 @@ const RCPPService: ServiceType = {
       ],
     },
     {
-      src: "/services/c4isr/modules/1.png",
+      src: "/services/rcpp/modules/1.png",
       icon: <ShieldCheck className="size-full" />,
       title: "FPGA-Based Processing Modules",
       text: "High-performance FPGA carrier boards with multiple daughter modules for versatile signal processing applications.",
@@ -763,7 +763,7 @@ const RCPPService: ServiceType = {
       ],
     },
     {
-      src: "/services/c4isr/modules/2.png",
+      src: "/services/rcpp/modules/2.png",
       icon: <ShieldCheck className="size-full" />,
       title: "OpenVPX-based RF Front End",
       text: "Flexible RF front-end module for receiving and digitizing multiple low-power RF signals up to C-band frequency.",
@@ -777,7 +777,7 @@ const RCPPService: ServiceType = {
       ],
     },
     {
-      src: "/services/c4isr/modules/3.png",
+      src: "/services/rcpp/modules/3.png",
       icon: <ShieldCheck className="size-full" />,
       title: "Timing Synchronization Module",
       text: "GPS-disciplined timing synchronization module for coherent operation across the entire system.",
@@ -791,7 +791,7 @@ const RCPPService: ServiceType = {
       ],
     },
     {
-      src: "/services/c4isr/modules/4.png",
+      src: "/services/rcpp/modules/4.png",
       icon: <ShieldCheck className="size-full" />,
       title: "System Software",
       text: "Robust system software stack providing real-time resource management and hardware abstraction.",
@@ -805,7 +805,7 @@ const RCPPService: ServiceType = {
       ],
     },
     {
-      src: "/services/c4isr/modules/5.png",
+      src: "/services/rcpp/modules/5.png",
       icon: <ShieldCheck className="size-full" />,
       title: "Application Development Kit",
       text: "Complete development environment with libraries, APIs, and tools for rapid application development.",
@@ -858,13 +858,13 @@ const RCPPService: ServiceType = {
   },
 };
 
-const updateModuleImages = (service: ServiceType) => {
-  service.modules.forEach((module, index) => {
-    module.src = `/services/c4isr/modules/${index}.png`;
-  });
-};
+// const updateModuleImages = (service: ServiceType) => {
+//   service.modules.forEach((module, index) => {
+//     module.src = `/services/c4isr/modules/${index}.png`;
+//   });
+// };
 
-[SDRService, EWService, PARTService, RCPPService].forEach(updateModuleImages);
+// [SDRService, EWService, PARTService, RCPPService].forEach(updateModuleImages);
 
 export const services: ServiceType[] = [
   C4ISRService,
