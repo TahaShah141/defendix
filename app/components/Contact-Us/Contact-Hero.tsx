@@ -10,7 +10,7 @@ export const ContactHero = () => {
         <h2 className="border-[#15522D] bg-[#052E16] text-white border text-sm  tracking-wide rounded-full px-4 py-3 uppercase">
           Get In Touch
         </h2>
-        <h3 className="text-5xl">Contact Us</h3>
+        <h3 className="text-5xl text-white">Contact Us</h3>
         <p className="text-center max-w-3xl text-xl text-neutral-300">
           {
             "We'd love to hear from you! Reach out to us with your inquiries, partnership opportunities, or any questions you may have."

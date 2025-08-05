@@ -6,10 +6,10 @@ import React from "react";
 export const Hero = () => {
   return (
     <div
-      className="w-full h-screen bg-cover bg-center flex items-center justify-center"
+      className="w-full h-screen min-h-[1000px] bg-cover bg-center flex items-center justify-center"
       style={{ backgroundImage: "url('/hero-bg.jpg')" }}
     >
-      <div className="size-full bg-black/75 pt-20">
+      <div className="size-full min-h-[1000px] text-white bg-black/75 pt-20">
         <div className="size-full flex flex-col justify-center gap-32 px-20">
           <div className="flex flex-col gap-8">
             <div className="flex flex-col gap-1 text-7xl ">

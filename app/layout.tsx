@@ -1,9 +1,9 @@
 import "./globals.css";
 
+import { Footer } from "./components/Shared/Footer";
 import { Inter } from "next/font/google";
 import type { Metadata } from "next";
 import { Navbar } from "./components/Shared/Navbar";
-import { Footer } from "./components/Shared/Footer";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} antialiased flex flex-col`}>
+      <body className={`${inter.variable} antialiased flex flex-col text-white`}>
         <Navbar />
         {children}
         <Footer />

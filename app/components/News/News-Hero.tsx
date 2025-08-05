@@ -7,7 +7,7 @@ export const NewsHero = () => {
         <h2 className="border-[#15522D] bg-[#052E16] text-white border text-sm  tracking-wide rounded-full px-4 py-3 uppercase">
           STAY UPDATED
         </h2>
-        <h3 className="text-5xl">News & Insights</h3>
+        <h3 className="text-5xl text-white">News & Insights</h3>
         <p className="text-center max-w-3xl text-xl text-neutral-300">
           {
             "Explore the latest news, technical articles, and insights from the world of defense technology and DefendiX."
