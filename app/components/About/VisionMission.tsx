@@ -21,7 +21,7 @@ export const VisionMission = () => {
         </div>
         <div className='flex-1 flex flex-col gap-10 rounded-4xl overflow-hidden bg-[url("/about-mission.png")] bg-center bg-cover text-white'>
           <div className='flex flex-col gap-10 p-12 size-full bg-black/50'>
-            <svg className='size-10' viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M11 12a1 1 0 1 0 2 0a1 1 0 1 0-2 0"/><path d="M12 7a5 5 0 1 0 5 5"/><path d="M13 3.055A9 9 0 1 0 20.941 11"/><path d="M15 6v3h3l3-3h-3V3zm0 3l-3 3"/></g></svg>
+            <svg className='size-10' viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"><path d="M11 12a1 1 0 1 0 2 0a1 1 0 1 0-2 0"/><path d="M12 7a5 5 0 1 0 5 5"/><path d="M13 3.055A9 9 0 1 0 20.941 11"/><path d="M15 6v3h3l3-3h-3V3zm0 3l-3 3"/></g></svg>
             <h4 className='text-3xl font-bold'>Our Mission</h4>
             <p className='text-lg'>{"Our mission is to design, develop, and deliver cutting-edge NCW solutions that integrate advanced communications, radar, data fusion, and real-time intelligence to enhance operational effectiveness and strategic advantage."}</p>
           </div>
