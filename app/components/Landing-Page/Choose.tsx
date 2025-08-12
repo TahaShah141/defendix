@@ -1,4 +1,4 @@
-import { Edit, Lock, ShieldCheck, Star } from 'lucide-react';
+import { CheckCircle2, Edit, Lock, ShieldCheck, Star, UserCheck } from 'lucide-react';
 import React, { ReactNode } from 'react'
 
 type CardProps = {
@@ -21,24 +21,24 @@ const Card = ({icon, title, text}: CardProps) => (
 
 const cards: CardProps[] = [
   {
-    icon: <Lock className='size-full'/>,
+    icon: <CheckCircle2 className='size-full'/>,
     title: "Proven Field Deployments",
-    text: "Our solutions are battle-hardened and field-proven across air, land, and sea — ensuring reliability in mission-critical environments."
+    text: "Our solutions are battle-tested across several countries."
   },
   {
     icon: <Edit className='size-full'/>,
-    title: "Rapid Customization",
-    text: "We tailor every system to mission-specific needs with flexible architectures and modular platforms for fast deployment and integration."
+    title: "End-to-End Control",
+    text: "Everything from R&D to integration is done in-house."
   },
   {
     icon: <ShieldCheck className='size-full'/>,
-    title: "Secure & Compliant",
-    text: "All systems are built to meet strict MIL-STD standards, with quantum-safe encryption and full EMI/EMC and environmental compliance."
+    title: "Built for Tomorrow",
+    text: "Our platforms scale as missions evolve."
   },
   {
-    icon: <Star className='size-full'/>,
-    title: "In-House R&D Excellence",
-    text: "From system design to RF hardware algorithmic warfare, every component is developed in-house - enabling full-stack control &  innovation."
+    icon: <UserCheck className='size-full'/>,
+    title: "Client-Focused Design",
+    text: "We customize each system to fit real operational needs."
   },
 ]
 

@@ -25,7 +25,7 @@ export const CTA = ({ isProduct = false }: CTAProps) => {
         />
 
         <div className="relative z-10 flex flex-col items-center text-center text-white py-[120px] px-[120px]">
-          <h2 className="text-5xl font-bold mb-10">
+          <h2 className="text-7xl max-w-5xl font-semibold mb-10">
             Ready to Enhance Your Defense Capabilities?
           </h2>
           <p className="text-xl text-white/90 max-w-3xl mb-10">

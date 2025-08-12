@@ -9,8 +9,8 @@ export default function ProductsPage() {
     <>
       <ProductHero />
       <Industries />
-      <Serve />
-      <Technologies />
+      {/* <Serve /> */}
+      <Technologies/>
       <CTA isProduct={true} />
     </>
   );

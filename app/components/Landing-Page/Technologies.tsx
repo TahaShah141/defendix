@@ -5,6 +5,7 @@ import Link from 'next/link';
 
 type CardProps = {
   src: string
+  minimalSrc: string
   icon: ReactNode;
   title: string;
   text: string
@@ -40,6 +41,24 @@ const Card = ({src, icon, title, text, flipped, points, link}: CardProps & {flip
   </div>
 )
 
+const MinimalCard = ({minimalSrc, title, text, link}: CardProps)  => {
+  return (
+    <div className="flex-1 max-w-md aspect-[3/4] bg-cover bg-center rounded-2xl overflow-hidden relative"
+      style={{ backgroundImage: `url(${minimalSrc})` }}>
+        <div className='absolute inset-0 bg-black/40 p-5 flex flex-col justify-end'>
+          <div className='backdrop-blur-md bg-gradient-to-br from-white/5 to-white/10 w-full p-4 rounded-2xl border border-white/20 flex flex-col justify-center gap-6 text-white min-h-64'>
+            <p className='text-2xl font-bold'>{title}</p>
+            <p>{text}</p>
+            <Link href={link} className='text-[#87EEAC] flex font-semibold gap-2 items-center mt-6'>
+              Learn More
+              <ArrowRight className='size-6' />
+            </Link>
+          </div>
+        </div>
+    </div>
+  )
+}
+
 const cards: CardProps[] = [
   {
     icon: <ShieldCheck className='size-full' />,
@@ -51,7 +70,8 @@ const cards: CardProps[] = [
       "Threat Evaluation & Weapon Assignment"
     ],
     link: "/services/c4isr",
-    src: "/technologies/c4isr.png"
+    src: "/technologies/c4isr.png",
+    minimalSrc: "/technologies/min_c4isr.png"
   },
   {
     icon: <RadioIcon className='size-full' />,
@@ -63,7 +83,8 @@ const cards: CardProps[] = [
       "Quantum-Safe Encryption"
     ],
     link: "/services/sdr",
-    src: "/technologies/radio.png"
+    src: "/technologies/radio.png",
+    minimalSrc: "/technologies/min_radio.png"
   },
   {
     icon: <Zap className='size-full' />,
@@ -75,7 +96,8 @@ const cards: CardProps[] = [
       "Signal Analysis"
     ],
     link: "/services/ew",
-    src: "/technologies/warfare.png"
+    src: "/technologies/warfare.png",
+    minimalSrc: "/technologies/min_warfare.png"
   },
   {
     icon: <Target className='size-full' />,
@@ -87,7 +109,8 @@ const cards: CardProps[] = [
       "Multi-Function Capabilities"
     ],
     link: "/services/part",
-    src: "/technologies/radar.png"
+    src: "/technologies/radar.png",
+    minimalSrc: "/technologies/min_radar.png"
   },
   {
     icon: <HardDrive className='size-full' />,
@@ -99,21 +122,33 @@ const cards: CardProps[] = [
       "Modular Architecture"
     ],
     link: "/services/rcpp",
-    src: "/technologies/platforms.png"
+    src: "/technologies/platforms.png",
+    minimalSrc: "/technologies/min_platforms.png"
   },
 ]
 
-export const Technologies = () => {
+export const Technologies = ({minimal=false}: {minimal?: boolean}) => {
   return (
     <div className='bg-white text-black flex flex-col gap-14 px-20 py-32 items-center'>
       <h2 className='border-[#DCFCE7] bg-[#F0FDF4] border text-sm  tracking-wide rounded-full px-4 py-3 uppercase'>Our Core Technologies</h2>
       <h3 className='text-5xl'>Comprehensive Defense Solutions</h3>
       <p className='text-center max-w-3xl text-xl text-neutral-600'>{"Our integrated approach covers all aspects of modern warfare, from command and control to electronic warfare and radar technologies."}</p>
-      <div className='flex flex-col gap-8'>
-        {cards.map((c, i) => (
-          <Card {...c} key={i} flipped={!!(i % 2)} />
-        ))}
-      </div>
+      {minimal ? (
+        <div className='flex flex-col gap-8 w-full'>
+          <div className='flex gap-8 w-full'>
+            {cards.slice(0, 3).map((c, i) => <MinimalCard {...c} key={i} />)}
+          </div>
+          <div className='flex gap-8 justify-center'>
+            {cards.slice(3).map((c, i) => <MinimalCard {...c} key={i} />)}
+          </div>
+        </div>
+      ) : (
+        <div className='flex flex-col gap-8'>
+          {cards.map((c, i) => (
+            <Card {...c} key={i} flipped={!!(i % 2)} />
+          ))}
+        </div>
+      )}
     </div>
   )
 }

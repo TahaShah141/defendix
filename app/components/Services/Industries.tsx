@@ -6,36 +6,42 @@ import React from "react";
 const industries = [
   {
     id: 1,
+    src: "/industries/defense.png",
     title: "Defense Forces",
     description:
       "Army, Navy, Air Force, and Joint Commands relying on integrated CZIISR, radar, and EW systems for real-time operational superiority.",
   },
   {
     id: 2,
+    src: "/industries/military.png",
     title: "Military R&D Facilities",
     description:
       "Institutes focused on development, integration, and simulation of next-generation NCW capabilities in secure environments.",
   },
   {
     id: 3,
+    src: "/industries/security.png",
     title: "National Security",
     description:
       "National security agencies and defense ministries requiring secure communication, surveillance, and threat detection systems.",
   },
   {
     id: 4,
+    src: "/industries/border.png",
     title: "Border & Coastal Security",
     description:
       "Agencies securing borders and coastlines using real-time tracking, radar surveillance, and interoperable communication networks.",
   },
   {
     id: 5,
+    src: "/industries/aviation.png",
     title: "Aerospace & Aviation",
     description:
       "Airborne platforms demanding lightweight, multi-function radar systems, SDRs, and electronic warfare solutions for mission-critical operations.",
   },
   {
     id: 6,
+    src: "/industries/integrators.png",
     title: "Defense OEMs & Integrators",
     description:
       "Global defense manufacturers integrating our ruggedized subsystems and RF components into airborne, ground, and naval systems.",
@@ -43,12 +49,22 @@ const industries = [
 ];
 
 const IndustryCard = ({ industry }: { industry: (typeof industries)[0] }) => (
-  <div className="border border-[#ECECEC] bg-[#F8F8F8] rounded-4xl overflow-hidden flex flex-col h-full">
-    <div className="p-5 flex flex-col gap-4 flex-1">
-      <h4 className="text-xl font-semibold leading-tight">{industry.title}</h4>
-      <p className="text-neutral-600 leading-relaxed flex-1">
-        {industry.description}
-      </p>
+  <div className="shadow-md border border-[#ECECEC] rounded-2xl overflow-hidden bg-white flex flex-col h-full">
+    <div className="flex flex-col gap-8 flex-1 pt-4">
+      <div className="flex flex-col gap-8 p-4">
+        <h4 className="text-2xl text-[#167F3D] font-semibold leading-tight">{industry.title}</h4>
+        <p className="text-neutral-500 leading-relaxed flex-1">
+          {industry.description}
+        </p>
+      </div>
+      <div
+        className="relative w-full h-[250px] bg-cover bg-[center_top_30%] flex items-center justify-center"
+        style={{ backgroundImage: `url(${industry.src})` }}
+      > 
+        <div className="absolute inset-0 bg-gradient-to-b from-white to-transparent">
+
+        </div>
+      </div>
     </div>
   </div>
 );
@@ -68,7 +84,7 @@ export const Industries = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-3 gap-6 max-w-7xl w-full mb-10">
+      <div className="grid grid-cols-3 gap-10 max-w-7xl w-full mb-10">
         {industries.map((industry) => (
           <IndustryCard key={industry.id} industry={industry} />
         ))}

@@ -6,10 +6,10 @@ export const VisionMission = () => {
       <div className='flex gap-14 items-center justify-between'>
         <div className='flex flex-col gap-4 text-neutral-600'>
           <h2 className='text-6xl text-black mb-8'>Defending the Future,<br />Today.</h2>
-          <p>{"DefendiX Technologies is a defense innovation company committed to designing and delivering cutting-edge technologies that shape the future of Network-Centric Warfare (NCW). Our team blends 60+ years of combined experience across system architecture, RF engineering, embedded systems, and algorithmic warfare."}</p>
-          <p>{"We don't just build systems — we build strategic superiority."}</p>
+          <p className='text-xl'>{"Modern warfare demands multi-domain strategy where relatively less superior weaponry when networked in an efficient way can beat the state of the art standalone war machines. The central component powering such a multi-domain strategy is Network Centric Warfare (NCW). "}</p>
+          <p className='text-xl'>{"With our 2 decades of experience in design, development and deployment of NCW solutions, DefendiX team is rightly positioned to design and build innovative solutions with critical technologies including but not limited to NCW Architecture, C4I (Command, Control, Communication and Computer), Software Defined Radio (SDR), Electronic Warfare (EW) and Phased Array Radar Technologies."}</p>
         </div>
-        <img src="/about-overview.png" alt="" className='rounded-4xl w-[40%]' />
+        <img src="/about-overview.png" alt="" className='rounded-4xl object-cover w-[50%] aspect-[4/3]' />
       </div>
       <div className='flex w-full gap-10'>
         <div className='flex-1 flex flex-col gap-10 rounded-4xl overflow-hidden bg-[url("/about-vision.png")] bg-center bg-cover text-white'>
