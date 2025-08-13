@@ -28,7 +28,9 @@ const Card = ({src, icon, title, text, flipped, points, link}: CardProps & {flip
         {points.map((p, i) => (
           <div key={i} className='flex gap-2'>
             <CheckCircle2 className='size-6 text-[#167F3D]' />
-            {p}
+            <p className='flex-1'>{p.split(":").map((text, i) => (
+              i === 0 ? <span key={i} className='font-bold'>{text+": "}</span> : text
+            ))}</p>
           </div>
         ))}
       </div>
@@ -65,9 +67,9 @@ const cards: CardProps[] = [
     title: "C4ISR",
     text: "Command, Control, Communications, Computers, Intelligence, Surveillance & Reconnaissance systems",
     points: [
-      "Real-time Situational Awareness",
-      "Multi-Sensor Function",
-      "Threat Evaluation & Weapon Assignment"
+      "Multi-Band High Throughput Communication: Operates across VHF to S bands with up to 200 MHz instantaneous bandwidth, supporting simultaneous voice, video, and data transmission.",
+      "Smart Threat Response: Integrated TEWA system automates threat evaluation and weapon assignment for rapid, optimized engagement.",
+      "Interoperable and Scalable Architecture: MIL-STD-compliant architecture ensures seamless, scalable communication across Army, Navy, and Air Force command tiers."
     ],
     link: "/services/c4isr",
     src: "/technologies/c4isr.png",
@@ -78,9 +80,9 @@ const cards: CardProps[] = [
     title: "Software Defined Radio",
     text: "Versatile communication platforms with dynamic waveform configuration",
     points: [
-      "Multi-band Operation",
-      "Fast Frequency Hopping",
-      "Quantum-Safe Encryption"
+      "Multi-Band High Throughput Communication: Operates across VHF to S bands with up to 200 MHz instantaneous bandwidth, supporting simultaneous voice, video, and data transmission.",
+      "Secure & Reconfigurable Architecture: Features fast frequency hopping, quantum-safe key exchange, and support for custom waveforms for robust, jam-resistant communication.",
+      "Battle-Tested & MIL-STD Compliant: Field-proven SDR platform with modular design, GPS-based synchronization, and rugged build for tactical defense operations."
     ],
     link: "/services/sdr",
     src: "/technologies/radio.png",
@@ -91,9 +93,9 @@ const cards: CardProps[] = [
     title: "Electronic Warfare (EW)",
     text: "Electromagnetic spectrum dominance through detection, disruption, and denial",
     points: [
-      "ELINT Systems",
-      "Threat Suppression",
-      "Signal Analysis"
+      "Electromagnetic Spectrum Dominance: Detects, disrupts, deceives, or denies enemy electronic systems—essential for modern Network Centric Warfare (NCW).",
+      "Integrated ELINT Platforms: Gathers and analyzes enemy radar and communication signals to build threat libraries and enhance situational awareness.",
+      "Modular & Deployable Systems: Designed for aerial and ground platforms, with integration capability for threat suppression and neutralization missions."
     ],
     link: "/services/ew",
     src: "/technologies/warfare.png",
@@ -104,9 +106,9 @@ const cards: CardProps[] = [
     title: "Phased Array Radar",
     text: "Advanced radar technologies with electronic beam steering capabilities",
     points: [
-      "T/R Modules",
-      "Beamforming Controllers",
-      "Multi-Function Capabilities"
+      "Multi-Function Radar Capability: Enables simultaneous surveillance, guidance, and tracking using electronic beam steering with no mechanical movement.",
+      "Advanced T/R Modules & Antennas: In-house developed T/R modules and AESA antennas across S, C, X, and Ku bands for high-performance, platform-specific deployment.",
+      "High-Precision Signal Processing: Features beamforming controllers, digital signal processors, and MMI for real-time target tracking, classification, and threat prioritization."
     ],
     link: "/services/part",
     src: "/technologies/radar.png",
@@ -117,9 +119,9 @@ const cards: CardProps[] = [
     title: "Ruggedized Control and Processing Platforms",
     text: "OpenVPX-based control and processing platforms for harsh environments",
     points: [
-      "MIL-STD Compliance",
-      "High-Speed Processing",
-      "Modular Architecture"
+      "Modular OpenVPX Architecture:  High-speed OpenVPX-based backplane with FMC daughter cards and multi-FPGA modules enabling low-latency, high-bandwidth inter-module communication.",
+      "Real-Time Processing & Synchronization:  Supports beamforming, pulse compression, Doppler processing, with GPS-disciplined timing, Linux-based system software, secure boot, and diagnostics.",
+      "Developer-Ready & MIL-STD Compliant: Ships with Application Development Kit (ADK) for C/C++, LabVIEW, Python, and meets full MIL-STD requirements for defense environments."
     ],
     link: "/services/rcpp",
     src: "/technologies/platforms.png",

@@ -3,48 +3,63 @@
 import React, { useState } from "react";
 
 import { CheckCircle2 } from "lucide-react";
-import Image from "next/image";
 
 const tabs = [
   {
     id: "air-forces",
+    src: "/defense.png",
     label: "Air Forces",
     content: {
       title: "Air Forces",
       description:
-        "Ensure dominance in the skies with advanced radar, secure communications, and electronic warfare systems tailored for aircraft and drones.",
+        "Air defense capabilities with real-time situational awareness, secure communication, and coordinated mission execution.",
       points: [
-        "Real-time airborne threat detection",
-        "Secure ground-to-air data links",
-        "Integration with radar and EW platforms",
+        "Recognized air picture for effective threat detection and tracking.",            
+        "Secure ground-to-air and air-to-air communication links.",          
+        "Integrated command and control for rapid response.",            
       ],
     },
   },
   {
     id: "naval-forces",
+    src: "/defense.png",
     label: "Naval Forces",
     content: {
       title: "Naval Forces",
-      description: "",
-      points: [],
+      description: "Maritime operations with continuous situational awareness, secure fleet communications, and coordinated threat response.",
+      points: [
+        "Surface and aerial surveillance across maritime zones.",
+        "Secure ship-to-ship, ship-to-air, and ship-to-shore communication.",
+        "Integrated naval command systems for rapid response.",
+      ],
     },
   },
   {
     id: "ground-forces",
+    src: "/defense.png",
     label: "Ground Forces",
     content: {
       title: "Ground Forces",
-      description: "",
-      points: [],
+      description: "Land operations with comprehensive situational awareness, secure tactical communication, and responsive mission control.",
+      points: [
+        "Recognized land picture from integrated sensor data.",
+        "Secure ground-to-ground and ground-to-air communication links.",
+        "Unified command for tactical and strategic missions.",
+      ],
     },
   },
   {
     id: "joint-command",
+    src: "/defense.png",
     label: "Joint Command Units",
     content: {
       title: "Joint Command Units",
-      description: "",
-      points: [],
+      description: "Cross-domain operations with a common operating picture, secure interoperability, and coordinated mission execution.",
+      points: [
+        "Shared operational picture integrating land, air, and naval data.",
+        "Seamless interoperability across all force components.",
+        "Coordinated threat evaluation and weapon assignment.",
+      ],
     },
   },
 ];
@@ -108,7 +123,7 @@ export const Defense = () => {
 
         <div className="flex-1">
           <div className="p-8 relative overflow-hidden">
-            <img src={'/defense.png'} className="" />
+            <img src={currentTab!.src} className="" />
             
             <div className="absolute top-0 left-0 h-4 w-20 bg-[#4A855F] skew-x-[45deg]" />
             <div className="absolute top-0 left-0 h-20 w-4 bg-[#4A855F] skew-y-[45deg]" />

@@ -10,19 +10,13 @@ export const CTA = ({ isProduct = false }: CTAProps) => {
   return (
     <div className="p-6 bg-white">
       <div className="relative overflow-hidden  rounded-[120px] bg-[#167F3D] ">
-        {!isProduct && (
-          <Image
-            src="/cta.jpg"
-            alt="Defense background"
-            fill
-            className="object-cover"
-          />
-        )}
-        <div
-          className={`absolute inset-0  ${
-            isProduct ? "" : "bg-black/70"
-          } rounded-[120px]`}
+        <Image
+          src="/cta.jpg"
+          alt="Defense background"
+          fill
+          className="object-cover"
         />
+        <div className={`absolute inset-0 bg-black/70 rounded-[120px]`} />
 
         <div className="relative z-10 flex flex-col items-center text-center text-white py-[120px] px-[120px]">
           <h2 className="text-7xl max-w-5xl font-semibold mb-10">
@@ -35,11 +29,7 @@ export const CTA = ({ isProduct = false }: CTAProps) => {
           <div className="flex gap-6">
             <Link
               href="/services"
-              className={`${
-                isProduct
-                  ? "bg-[#F0FDF4] text-primary"
-                  : "bg-[#167F3D] text-white"
-              } px-8 py-4 rounded-2xl font-semibold hover:bg-[#16a34a] transition-colors duration-200`}
+              className={`bg-[#167F3D] text-white px-8 py-4 rounded-2xl font-semibold transition-colors duration-200`}
             >
               Explore our services
               <ArrowRight className="inline size-6 ml-2" />
