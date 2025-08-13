@@ -29,9 +29,10 @@ type ContactFormData = z.infer<typeof contactSchema>;
 
 type ContactUsProps = {
   showPill?: boolean;
+  showInfo?: boolean
 };
 
-export const ContactUs = ({ showPill = true }: ContactUsProps) => {
+export const ContactUs = ({ showPill = true, showInfo = false }: ContactUsProps) => {
   const form = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
     defaultValues: {
@@ -66,45 +67,51 @@ export const ContactUs = ({ showPill = true }: ContactUsProps) => {
         </div>
       )}
 
-      <div className="flex gap-16 max-w-7xl mx-auto">
-        <div className="flex-1 flex flex-col gap-8">
-          <div className="flex flex-col gap-8">
-            <div className="flex gap-4 items-start">
-              <MapPin className="size-6 text-[#167F3D] mt-1 flex-shrink-0" />
-              <div className="flex flex-col gap-2">
-                <h4 className="text-xl font-semibold">Our offices</h4>
-                <div className="text-neutral-700 leading-relaxed">
-                  <p>123 Business Ave, Suite 400, Riyadh, Riyadh</p>
-                  <p>Postal code 12345, Kingdom of Saudi Arabia</p>
-                  <br />
-                  <p>123 Business Ave, Suite 400, Islamabad, Federal Capital</p>
-                  <p>Postal code 12345, Pakistan</p>
+      <div className={`flex ${showInfo ? "gap-16" : "rounded-4xl overflow-hidden"} max-w-7xl mx-auto`}>
+        {showInfo ? (
+          <div className="flex-1 flex flex-col gap-8">
+            <div className="flex flex-col gap-8">
+              <div className="flex gap-4 items-start">
+                <MapPin className="size-6 text-[#167F3D] mt-1 flex-shrink-0" />
+                <div className="flex flex-col gap-2">
+                  <h4 className="text-xl font-semibold">Our offices</h4>
+                  <div className="text-neutral-700 leading-relaxed">
+                    <p>123 Business Ave, Suite 400, Riyadh, Riyadh</p>
+                    <p>Postal code 12345, Kingdom of Saudi Arabia</p>
+                    <br />
+                    <p>123 Business Ave, Suite 400, Islamabad, Federal Capital</p>
+                    <p>Postal code 12345, Pakistan</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex gap-4 items-start">
+                <Mail className="size-6 text-[#167F3D] mt-1 flex-shrink-0" />
+                <div className="flex flex-col gap-2">
+                  <h4 className="text-xl font-semibold">Email us</h4>
+                  <p className="text-neutral-700">
+                    info@defendixtechnologies.com
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-4 items-start">
+                <Phone className="size-6 text-[#167F3D] mt-1 flex-shrink-0" />
+                <div className="flex flex-col gap-2">
+                  <h4 className="text-xl font-semibold">Call us</h4>
+                  <p className="text-neutral-700">+1 (123) 456-7890</p>
                 </div>
               </div>
             </div>
-
-            <div className="flex gap-4 items-start">
-              <Mail className="size-6 text-[#167F3D] mt-1 flex-shrink-0" />
-              <div className="flex flex-col gap-2">
-                <h4 className="text-xl font-semibold">Email us</h4>
-                <p className="text-neutral-700">
-                  info@defendixtechnologies.com
-                </p>
-              </div>
-            </div>
-
-            <div className="flex gap-4 items-start">
-              <Phone className="size-6 text-[#167F3D] mt-1 flex-shrink-0" />
-              <div className="flex flex-col gap-2">
-                <h4 className="text-xl font-semibold">Call us</h4>
-                <p className="text-neutral-700">+1 (123) 456-7890</p>
-              </div>
-            </div>
           </div>
-        </div>
+        ) : (
+          <div className="flex-1 bg-red-500">
+            <img src="/contact-banner.png" alt="" className="flex-1 h-full object-cover"/>
+          </div>
+        )}  
 
         <div className="flex-1">
-          <div className="bg-[#167F3D] rounded-4xl p-8">
+          <div className={`bg-[#167F3D] ${showInfo ? "rounded-4xl" : "rounded-r-4xl"} p-8`}>
             <div className="mb-6">
               <h4 className="text-white text-xl font-semibold mb-2">
                 Complete the form below for the demo and pricing details.

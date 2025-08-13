@@ -23,7 +23,7 @@ const Module = ({flipped, icon, title, text, points, src}: ServiceType['modules'
             ))}
           </div>
         </div>
-        <img src={src} className='rounded-full overflow-hidden aspect-square max-h-96' />
+        <img src={src} className='rounded-full overflow-hidden object-cover aspect-square h-96' />
       </div>
     </div>
   )

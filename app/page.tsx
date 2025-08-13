@@ -17,7 +17,7 @@ export default function LandingPage() {
       <CTA />
       <News />
       <FAQ />
-      <ContactUs />
+      <ContactUs showInfo />
     </>
   );
 }

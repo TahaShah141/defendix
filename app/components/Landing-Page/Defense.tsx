@@ -106,14 +106,22 @@ export const Defense = () => {
           )}
         </div>
 
-        <div className="flex-1 relative">
-          <Image
-            src="/defense.png"
-            alt="Defense forces"
-            width={600}
-            height={400}
-            className="w-full h-auto "
-          />
+        <div className="flex-1">
+          <div className="p-8 relative overflow-hidden">
+            <img src={'/defense.png'} className="" />
+            
+            <div className="absolute top-0 left-0 h-4 w-20 bg-[#4A855F] skew-x-[45deg]" />
+            <div className="absolute top-0 left-0 h-20 w-4 bg-[#4A855F] skew-y-[45deg]" />
+            
+            <div className="absolute bottom-0 left-0 h-4 w-20 bg-[#4A855F] skew-x-[45deg]" />
+            <div className="absolute bottom-0 left-0 h-20 w-4 bg-[#4A855F] -skew-y-[45deg]" />
+            
+            <div className="absolute top-0 right-0 h-4 w-20 bg-[#4A855F] -skew-x-[45deg]" />
+            <div className="absolute top-0 right-0 h-20 w-4 bg-[#4A855F] skew-y-[45deg]" />
+            
+            <div className="absolute bottom-0 right-0 h-4 w-20 bg-[#4A855F] -skew-x-[45deg]" />
+            <div className="absolute bottom-0 right-0 h-20 w-4 bg-[#4A855F] skew-y-[45deg]" />
+          </div>
         </div>
       </div>
     </div>
