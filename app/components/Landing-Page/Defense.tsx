@@ -14,9 +14,9 @@ const tabs = [
       description:
         "Air defense capabilities with real-time situational awareness, secure communication, and coordinated mission execution.",
       points: [
-        "Recognized air picture for effective threat detection and tracking.",            
-        "Secure ground-to-air and air-to-air communication links.",          
-        "Integrated command and control for rapid response.",            
+        "Recognized air picture for effective threat detection and tracking.",
+        "Secure ground-to-air and air-to-air communication links.",
+        "Integrated command and control for rapid response.",
       ],
     },
   },
@@ -26,7 +26,8 @@ const tabs = [
     label: "Naval Forces",
     content: {
       title: "Naval Forces",
-      description: "Maritime operations with continuous situational awareness, secure fleet communications, and coordinated threat response.",
+      description:
+        "Maritime operations with continuous situational awareness, secure fleet communications, and coordinated threat response.",
       points: [
         "Surface and aerial surveillance across maritime zones.",
         "Secure ship-to-ship, ship-to-air, and ship-to-shore communication.",
@@ -40,7 +41,8 @@ const tabs = [
     label: "Ground Forces",
     content: {
       title: "Ground Forces",
-      description: "Land operations with comprehensive situational awareness, secure tactical communication, and responsive mission control.",
+      description:
+        "Land operations with comprehensive situational awareness, secure tactical communication, and responsive mission control.",
       points: [
         "Recognized land picture from integrated sensor data.",
         "Secure ground-to-ground and ground-to-air communication links.",
@@ -54,7 +56,8 @@ const tabs = [
     label: "Joint Command Units",
     content: {
       title: "Joint Command Units",
-      description: "Cross-domain operations with a common operating picture, secure interoperability, and coordinated mission execution.",
+      description:
+        "Cross-domain operations with a common operating picture, secure interoperability, and coordinated mission execution.",
       points: [
         "Shared operational picture integrating land, air, and naval data.",
         "Seamless interoperability across all force components.",
@@ -69,27 +72,27 @@ export const Defense = () => {
   const currentTab = tabs.find((tab) => tab.id === activeTab);
 
   return (
-    <div className="text-black bg-white flex flex-col items-center relative overflow-hidden py-[120px] px-20">
-      <div className="flex flex-col items-center gap-10 mb-10">
-        <h2 className="border-[#DCFCE7] bg-[#BBF7D0] border text-sm tracking-wide rounded-full px-4 py-3 uppercase">
+    <div className="text-black bg-white flex flex-col items-center relative overflow-hidden py-16 md:py-24 lg:py-[120px] px-4 sm:px-8 md:px-12 lg:px-20">
+      <div className="flex flex-col items-center gap-6 md:gap-8 lg:gap-10 mb-8 md:mb-10">
+        <h2 className="border-[#DCFCE7] bg-[#BBF7D0] border text-xs sm:text-sm tracking-wide rounded-full px-3 md:px-4 py-2 md:py-3 uppercase">
           WHO WE HELP
         </h2>
-        <h3 className="text-5xl font-bold text-center">
+        <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center">
           Empowering Those Who Defend
         </h3>
-        <p className="text-center max-w-4xl text-lg text-neutral-700">
+        <p className="text-center max-w-4xl text-sm sm:text-base md:text-lg text-neutral-700">
           DefendiX Technologies delivers advanced solutions to military forces
           and defense organizations across all domains—air, sea, land, and
           command centers.
         </p>
       </div>
 
-      <div className="flex mb-10 border-b border-gray-200 max-w-7xl w-full">
+      <div className="flex flex-col sm:flex-row mb-8 md:mb-10 border-b border-gray-200 max-w-7xl w-full overflow-x-auto">
         {tabs.map((tab) => (
           <button
             key={tab.id}
             onClick={() => setActiveTab(tab.id)}
-            className={`flex-1 px-4 py-3 text-sm font-medium transition-all duration-200 border-b-2 ${
+            className={`flex-1 px-2 sm:px-4 py-3 text-xs sm:text-sm font-medium transition-all duration-200 border-b-2 whitespace-nowrap ${
               activeTab === tab.id
                 ? "border-[#167F3D] text-[#167F3D]"
                 : "border-transparent text-neutral-600 hover:text-neutral-800 hover:border-neutral-300"
@@ -100,42 +103,44 @@ export const Defense = () => {
         ))}
       </div>
 
-      <div className="flex gap-16 items-center max-w-7xl w-full">
-        <div className="flex-1 flex flex-col gap-8">
-          <h4 className="text-4xl font-bold text-black">
+      <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center max-w-7xl w-full">
+        <div className="flex-1 flex flex-col gap-4 md:gap-6 lg:gap-8">
+          <h4 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black">
             {currentTab?.content.title}
           </h4>
-          <p className="text-lg text-neutral-700 leading-relaxed">
+          <p className="text-sm sm:text-base md:text-lg text-neutral-700 leading-relaxed">
             {currentTab?.content.description}
           </p>
 
           {currentTab && currentTab.content.points.length > 0 && (
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-3 md:gap-4">
               {currentTab.content.points.map((point, index) => (
                 <div key={index} className="flex gap-3 items-start">
-                  <CheckCircle2 className="size-6 text-[#167F3D] mt-0.5 flex-shrink-0" />
-                  <span className="text-neutral-700">{point}</span>
+                  <CheckCircle2 className="size-5 md:size-6 text-[#167F3D] mt-0.5 flex-shrink-0" />
+                  <span className="text-neutral-700 text-sm sm:text-base">
+                    {point}
+                  </span>
                 </div>
               ))}
             </div>
           )}
         </div>
 
-        <div className="flex-1">
-          <div className="p-8 relative overflow-hidden">
-            <img src={currentTab!.src} className="" />
-            
-            <div className="absolute top-0 left-0 h-4 w-20 bg-[#4A855F] skew-x-[45deg]" />
-            <div className="absolute top-0 left-0 h-20 w-4 bg-[#4A855F] skew-y-[45deg]" />
-            
-            <div className="absolute bottom-0 left-0 h-4 w-20 bg-[#4A855F] skew-x-[45deg]" />
-            <div className="absolute bottom-0 left-0 h-20 w-4 bg-[#4A855F] -skew-y-[45deg]" />
-            
-            <div className="absolute top-0 right-0 h-4 w-20 bg-[#4A855F] -skew-x-[45deg]" />
-            <div className="absolute top-0 right-0 h-20 w-4 bg-[#4A855F] skew-y-[45deg]" />
-            
-            <div className="absolute bottom-0 right-0 h-4 w-20 bg-[#4A855F] -skew-x-[45deg]" />
-            <div className="absolute bottom-0 right-0 h-20 w-4 bg-[#4A855F] skew-y-[45deg]" />
+        <div className="flex-1 w-full lg:w-auto">
+          <div className="p-4 md:p-6 lg:p-8 relative overflow-hidden">
+            <img src={currentTab!.src} className="w-full h-auto object-cover" />
+
+            <div className="absolute top-0 left-0 h-3 md:h-4 w-12 md:w-20 bg-[#4A855F] skew-x-[45deg]" />
+            <div className="absolute top-0 left-0 h-12 md:h-20 w-3 md:w-4 bg-[#4A855F] skew-y-[45deg]" />
+
+            <div className="absolute bottom-0 left-0 h-3 md:h-4 w-12 md:w-20 bg-[#4A855F] skew-x-[45deg]" />
+            <div className="absolute bottom-0 left-0 h-12 md:h-20 w-3 md:w-4 bg-[#4A855F] -skew-y-[45deg]" />
+
+            <div className="absolute top-0 right-0 h-3 md:h-4 w-12 md:w-20 bg-[#4A855F] -skew-x-[45deg]" />
+            <div className="absolute top-0 right-0 h-12 md:h-20 w-3 md:w-4 bg-[#4A855F] skew-y-[45deg]" />
+
+            <div className="absolute bottom-0 right-0 h-3 md:h-4 w-12 md:w-20 bg-[#4A855F] -skew-x-[45deg]" />
+            <div className="absolute bottom-0 right-0 h-12 md:h-20 w-3 md:w-4 bg-[#4A855F] skew-y-[45deg]" />
           </div>
         </div>
       </div>

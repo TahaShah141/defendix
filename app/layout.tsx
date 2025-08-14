@@ -22,9 +22,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} antialiased flex flex-col text-white`}>
+      <body
+        className={`${inter.variable} antialiased flex flex-col text-white overflow-x-hidden`}
+      >
         <Navbar />
-        {children}
+        <main className="w-full">{children}</main>
         <Footer />
       </body>
     </html>

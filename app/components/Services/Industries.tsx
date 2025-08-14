@@ -49,21 +49,21 @@ const industries = [
 ];
 
 const IndustryCard = ({ industry }: { industry: (typeof industries)[0] }) => (
-  <div className="shadow-md border border-[#ECECEC] rounded-2xl overflow-hidden bg-white flex flex-col h-full">
-    <div className="flex flex-col gap-8 flex-1 pt-4">
-      <div className="flex flex-col gap-8 p-4">
-        <h4 className="text-2xl text-[#167F3D] font-semibold leading-tight">{industry.title}</h4>
-        <p className="text-neutral-500 leading-relaxed flex-1">
+  <div className="shadow-md border border-[#ECECEC] rounded-xl md:rounded-2xl overflow-hidden bg-white flex flex-col h-full">
+    <div className="flex flex-col gap-4 md:gap-6 lg:gap-8 flex-1 pt-3 md:pt-4">
+      <div className="flex flex-col gap-4 md:gap-6 lg:gap-8 p-3 md:p-4">
+        <h4 className="text-lg sm:text-xl md:text-2xl text-[#167F3D] font-semibold leading-tight">
+          {industry.title}
+        </h4>
+        <p className="text-neutral-500 leading-relaxed flex-1 text-sm sm:text-base">
           {industry.description}
         </p>
       </div>
       <div
-        className="relative w-full h-[250px] bg-cover bg-[center_top_30%] flex items-center justify-center"
+        className="relative w-full h-[200px] sm:h-[220px] md:h-[250px] bg-cover bg-[center_top_30%] flex items-center justify-center"
         style={{ backgroundImage: `url(${industry.src})` }}
-      > 
-        <div className="absolute inset-0 bg-gradient-to-b from-white to-transparent">
-
-        </div>
+      >
+        <div className="absolute inset-0 bg-gradient-to-b from-white to-transparent"></div>
       </div>
     </div>
   </div>
@@ -71,20 +71,22 @@ const IndustryCard = ({ industry }: { industry: (typeof industries)[0] }) => (
 
 export const Industries = () => {
   return (
-    <div className="bg-white text-black flex flex-col gap-10 px-20 py-[120px] items-center">
-      <div className="flex flex-col items-center gap-10 mb-10">
-        <h2 className="border-[#DCFCE7] bg-[#F0FDF4] border text-sm tracking-wide rounded-full px-4 py-3 uppercase">
+    <div className="bg-white text-black flex flex-col gap-6 md:gap-8 lg:gap-10 px-4 sm:px-8 md:px-12 lg:px-20 py-16 md:py-24 lg:py-[120px] items-center">
+      <div className="flex flex-col items-center gap-6 md:gap-8 lg:gap-10 mb-6 md:mb-8 lg:mb-10">
+        <h2 className="border-[#DCFCE7] bg-[#F0FDF4] border text-xs sm:text-sm tracking-wide rounded-full px-3 md:px-4 py-2 md:py-3 uppercase">
           AREAS WE COVER
         </h2>
-        <h3 className="text-5xl font-bold text-center">Industries we serve</h3>
-        <p className="text-center max-w-4xl text-lg text-neutral-700">
+        <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center">
+          Industries we serve
+        </h3>
+        <p className="text-center max-w-4xl text-sm sm:text-base md:text-lg text-neutral-700 px-4">
           Our advanced defense technologies are trusted by critical sectors
           requiring secure, real-time communication, situational awareness, and
           mission-ready systems.
         </p>
       </div>
 
-      <div className="grid grid-cols-3 gap-10 max-w-7xl w-full mb-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10 max-w-7xl w-full mb-6 md:mb-8 lg:mb-10">
         {industries.map((industry) => (
           <IndustryCard key={industry.id} industry={industry} />
         ))}
