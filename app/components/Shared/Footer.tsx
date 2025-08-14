@@ -87,7 +87,7 @@ export const Footer = () => {
         </div>
 
         <div className="flex flex-col gap-4">
-          <h4 className="text-lg font-semibold mb-2">Contact Info</h4>
+          <h4 className="text-lg font-semibold mb-2">Contact</h4>
           <div className="flex gap-3 items-start">
             <Mail className="size-5 text-[#167F3D] mt-0.5 flex-shrink-0" />
             <span className="text-neutral-400">

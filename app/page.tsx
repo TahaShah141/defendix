@@ -15,7 +15,7 @@ export default function LandingPage() {
       <Technologies minimal />
       <Defense />
       <CTA />
-      <News />
+      {/* <News /> */}
       <FAQ />
       <ContactUs showInfo />
     </>

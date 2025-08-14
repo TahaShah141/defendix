@@ -9,14 +9,14 @@ type CTAProps = {
 export const CTA = ({ isProduct = false }: CTAProps) => {
   return (
     <div className="p-6 bg-white">
-      <div className="relative overflow-hidden  rounded-[120px] bg-[#167F3D] ">
+      <div className="relative overflow-hidden  rounded-4xl bg-[#167F3D] ">
         <Image
           src="/cta.jpg"
           alt="Defense background"
           fill
           className="object-cover"
         />
-        <div className={`absolute inset-0 bg-black/70 rounded-[120px]`} />
+        <div className={`absolute inset-0 bg-black/70 rounded-4xl`} />
 
         <div className="relative z-10 flex flex-col items-center text-center text-white py-[120px] px-[120px]">
           <h2 className="text-7xl max-w-5xl font-semibold mb-10">

@@ -7,7 +7,7 @@ import { ServiceType } from "@/lib/services";
 export const ServicesCTA = ({ title, description }: ServiceType["CTA"]) => {
   return (
     <div className="p-6 bg-white">
-      <div className="bg-cover bg-[center_top_60%] bg-[url('/cta.jpg')] overflow-hidden rounded-[120px] ">
+      <div className="bg-cover bg-[center_top_60%] bg-[url('/cta.jpg')] overflow-hidden rounded-4xl ">
         <div className="relative z-10 flex bg-black/80 flex-col items-center text-center text-white py-[120px] px-[120px]">
           <h2 className="text-7xl max-w-3xl font-bold mb-10">{title}</h2>
           <p className="text-xl text-white/90 max-w-3xl mb-10">{description}</p>

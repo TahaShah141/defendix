@@ -46,7 +46,7 @@ const faqData = [
 
 export const FAQ = () => {
   return (
-    <div className="bg-white text-black flex flex-col gap-10 px-20 py-[120px] items-center">
+    <div className="bg-white text-black flex flex-col gap-10 px-20 pt-[120px] items-center">
       <div className="flex flex-col items-center gap-10 mb-10">
         <h2 className="border-[#DCFCE7] bg-[#F0FDF4] border text-sm tracking-wide rounded-full px-4 py-3 uppercase">
           FAQ
@@ -78,14 +78,14 @@ export const FAQ = () => {
         </Accordion>
       </div>
 
-      <div className="mt-10">
+      {/* <div className="mt-10">
         <Link
           href="#"
           className="flex items-center justify-center gap-2.5 px-3 py-3 pr-4 rounded-xl border border-[#BBF7D0] bg-white text-primary font-semibold text-lg"
         >
           See more
         </Link>
-      </div>
+      </div> */}
     </div>
   );
 };
