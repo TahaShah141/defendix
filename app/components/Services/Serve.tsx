@@ -29,17 +29,19 @@ const serve = [
 ];
 
 const ServeCard = ({ article }: { article: (typeof serve)[0] }) => (
-  <div className="border border-[#ECECEC] rounded-4xl overflow-hidden flex flex-col h-full">
+  <div className="border border-[#ECECEC] rounded-2xl md:rounded-4xl overflow-hidden flex flex-col h-full">
     <Image
       src="/products/serve.jpg"
       alt="Serve article"
       width={400}
       height={240}
-      className="w-full h-60 object-cover"
+      className="w-full h-40 sm:h-48 md:h-60 object-cover"
     />
-    <div className="p-5 flex flex-col gap-4 flex-1">
-      <h4 className="text-xl font-semibold leading-tight">{article.title}</h4>
-      <p className="text-neutral-600 leading-relaxed flex-1">
+    <div className="p-3 sm:p-4 md:p-5 flex flex-col gap-3 md:gap-4 flex-1">
+      <h4 className="text-lg sm:text-xl font-semibold leading-tight">
+        {article.title}
+      </h4>
+      <p className="text-neutral-600 leading-relaxed flex-1 text-sm sm:text-base">
         {article.description}
       </p>
     </div>
@@ -48,22 +50,22 @@ const ServeCard = ({ article }: { article: (typeof serve)[0] }) => (
 
 export const Serve = () => {
   return (
-    <div className="bg-white text-black flex flex-col gap-10 px-20 py-[120px] items-center">
-      <div className="flex flex-col items-center gap-10 mb-10">
-        <h2 className="border-[#DCFCE7] bg-[#F0FDF4] border text-sm tracking-wide rounded-full px-4 py-3 uppercase">
+    <div className="bg-white text-black flex flex-col gap-6 md:gap-8 lg:gap-10 px-4 sm:px-8 md:px-12 lg:px-20 py-16 md:py-24 lg:py-[120px] items-center">
+      <div className="flex flex-col items-center gap-6 md:gap-8 lg:gap-10 mb-6 md:mb-8 lg:mb-10">
+        <h2 className="border-[#DCFCE7] bg-[#F0FDF4] border text-xs sm:text-sm tracking-wide rounded-full px-3 md:px-4 py-2 md:py-3 uppercase">
           WHO WE HELP
         </h2>
-        <h3 className="text-5xl font-bold text-center">
+        <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center">
           Empowering Those Who Defend
         </h3>
-        <p className="text-center max-w-4xl text-lg text-neutral-700">
+        <p className="text-center max-w-4xl text-sm sm:text-base md:text-lg text-neutral-700 px-4">
           DefendiX Technologies delivers advanced solutions to military forces
           and defense organizations across all domains—air, sea, land, and
           command centers.
         </p>
       </div>
 
-      <div className="grid grid-cols-4 gap-5 max-w-7xl w-full mb-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 max-w-7xl w-full mb-6 md:mb-8 lg:mb-10">
         {serve.map((article) => (
           <ServeCard key={article.id} article={article} />
         ))}

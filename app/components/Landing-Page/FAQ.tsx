@@ -46,31 +46,31 @@ const faqData = [
 
 export const FAQ = () => {
   return (
-    <div className="bg-white text-black flex flex-col gap-10 px-20 py-[120px] items-center">
-      <div className="flex flex-col items-center gap-10 mb-10">
-        <h2 className="border-[#DCFCE7] bg-[#F0FDF4] border text-sm tracking-wide rounded-full px-4 py-3 uppercase">
+    <div className="bg-white text-black flex flex-col gap-8 md:gap-10 px-4 sm:px-8 md:px-12 lg:px-20 py-16 md:py-24 lg:py-[120px] items-center">
+      <div className="flex flex-col items-center gap-6 md:gap-8 lg:gap-10 mb-6 md:mb-8 lg:mb-10">
+        <h2 className="border-[#DCFCE7] bg-[#F0FDF4] border text-xs sm:text-sm tracking-wide rounded-full px-3 md:px-4 py-2 md:py-3 uppercase">
           FAQ
         </h2>
-        <h3 className="text-5xl font-bold text-center">
+        <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center">
           Frequently Asked Questions
         </h3>
-        <p className="text-center max-w-4xl text-lg text-neutral-700">
+        <p className="text-center max-w-4xl text-sm sm:text-base md:text-lg text-neutral-700">
           Get answers to common questions about our defense technology solutions
           and services.
         </p>
       </div>
-      <div className="w-full">
-        <Accordion type="multiple" className="flex flex-col gap-6">
+      <div className="w-full max-w-5xl">
+        <Accordion type="multiple" className="flex flex-col gap-4 md:gap-6">
           {faqData.map((faq) => (
             <AccordionItem
-            key={faq.id}
-            value={faq.id}
-            className="flex flex-col gap-2 p-4 rounded-[20px] border-2 border-[#ECECEC] data-[state=open]:border-[#17A249] data-[state=open]:bg-[#F7FDFB] "
+              key={faq.id}
+              value={faq.id}
+              className="flex flex-col gap-2 p-3 md:p-4 rounded-2xl md:rounded-[20px] border-2 border-[#ECECEC] data-[state=open]:border-[#17A249] data-[state=open]:bg-[#F7FDFB] "
             >
-              <AccordionTrigger className="w-full flex text-xl font-semibold text-left hover:no-underline">
+              <AccordionTrigger className="w-full flex text-base sm:text-lg md:text-xl font-semibold text-left hover:no-underline">
                 {faq.question}
               </AccordionTrigger>
-              <AccordionContent className="w-full text-neutral-700 text-lg leading-relaxed">
+              <AccordionContent className="w-full text-neutral-700 text-sm sm:text-base md:text-lg leading-relaxed">
                 {faq.answer}
               </AccordionContent>
             </AccordionItem>
@@ -78,10 +78,10 @@ export const FAQ = () => {
         </Accordion>
       </div>
 
-      <div className="mt-10">
+      <div className="mt-6 md:mt-8 lg:mt-10">
         <Link
           href="#"
-          className="flex items-center justify-center gap-2.5 px-3 py-3 pr-4 rounded-xl border border-[#BBF7D0] bg-white text-primary font-semibold text-lg"
+          className="flex items-center justify-center gap-2.5 px-3 py-3 pr-4 rounded-xl border border-[#BBF7D0] bg-white text-primary font-semibold text-sm sm:text-base md:text-lg"
         >
           See more
         </Link>
