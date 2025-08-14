@@ -42,7 +42,7 @@ const Module = ({
         </div>
         <img
           src={src}
-          className="rounded-2xl lg:rounded-full overflow-hidden object-cover aspect-square w-full max-w-xs lg:max-w-none lg:h-64 xl:h-80 2xl:h-96"
+          className="rounded-2xl lg:rounded-full overflow-hidden object-cover lg:aspect-square w-full lg:max-w-sm"
         />
       </div>
     </div>

@@ -187,12 +187,12 @@ export const Technologies = ({ minimal = false }: { minimal?: boolean }) => {
       </p>
       {minimal ? (
         <div className="flex flex-col gap-6 md:gap-8 w-full max-w-7xl">
-          <div className="flex flex-col sm:flex-row gap-4 md:gap-6 lg:gap-8 w-full justify-center">
+          <div className="flex flex-col lg:flex-row gap-4 md:gap-6 lg:gap-8 w-full justify-center items-center">
             {cards.slice(0, 3).map((c, i) => (
               <MinimalCard {...c} key={i} />
             ))}
           </div>
-          <div className="flex flex-col sm:flex-row gap-4 md:gap-6 lg:gap-8 justify-center">
+          <div className="flex flex-col lg:flex-row gap-4 md:gap-6 lg:gap-8 justify-center items-center">
             {cards.slice(3).map((c, i) => (
               <MinimalCard {...c} key={i} />
             ))}

@@ -10,7 +10,7 @@ export default function AboutPage() {
       <AboutHero />
       <VisionMission />
       <Values />
-      <Founders />
+      {/* <Founders /> */}
       <CTA isProduct={false} />
     </>
   );
