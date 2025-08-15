@@ -75,9 +75,9 @@ export const ContactUs = ({
       )}
 
       <div
-        className={`flex flex-col ${
+        className={`flex flex-col lg:flex-row  ${
           showInfo
-            ? "lg:flex-row lg:gap-8 xl:gap-16"
+            ? "lg:gap-8 xl:gap-16"
             : "lg:rounded-4xl lg:overflow-hidden"
         } max-w-7xl mx-auto`}
       >
@@ -124,7 +124,7 @@ export const ContactUs = ({
             </div>
           </div>
         ) : (
-          <div className="flex-1 bg-red-500 mb-6 lg:mb-0 lg:rounded-l-4xl overflow-hidden">
+          <div className="flex-1 bg-red-500 mb-6 rounded-xl lg:mb-0 lg:rounded-l-4xl lg:rounded-r-none overflow-hidden">
             <img
               src="/contact-banner.png"
               alt=""
@@ -135,8 +135,8 @@ export const ContactUs = ({
 
         <div className="flex-1">
           <div
-            className={`bg-[#167F3D] ${
-              showInfo ? "rounded-2xl lg:rounded-4xl" : "lg:rounded-r-4xl"
+            className={`bg-[#167F3D] rounded-2xl  ${
+              showInfo ? "lg:rounded-4xl" : "lg:rounded-r-4xl lg:rounded-l-none"
             } p-6 md:p-8`}
           >
             <div className="mb-6">

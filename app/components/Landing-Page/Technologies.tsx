@@ -34,7 +34,7 @@ const Card = ({
   link,
 }: CardProps & { flipped: boolean }) => (
   <div
-    className={`flex flex-col ${
+    className={`flex flex-col-reverse ${
       flipped ? "lg:flex-row-reverse" : "lg:flex-row"
     } gap-8 lg:gap-16 items-center`}
   >
@@ -83,7 +83,7 @@ const Card = ({
 const MinimalCard = ({ minimalSrc, title, text, link }: CardProps) => {
   return (
     <div
-      className="flex-1 min-w-[280px] max-w-md aspect-[3/4] bg-cover bg-center rounded-xl md:rounded-2xl overflow-hidden relative"
+      className="flex-1 min-w-[280px] w-full sm:max-w-md aspect-[3/4] bg-cover bg-center rounded-xl md:rounded-2xl overflow-hidden relative"
       style={{ backgroundImage: `url(${minimalSrc})` }}
     >
       <div className="absolute inset-0 bg-black/40 p-3 md:p-5 flex flex-col justify-end">
