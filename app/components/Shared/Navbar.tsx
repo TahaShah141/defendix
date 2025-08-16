@@ -51,7 +51,7 @@ export const Navbar = () => {
           >
             What we do
           </Link>
-          <Link href={"#"} className="hover:opacity-75 transition-opacity">
+          <Link href={"/news"} className="hover:opacity-75 transition-opacity">
             Resources
           </Link>
           <Link
@@ -104,7 +104,7 @@ export const Navbar = () => {
                 What we do
               </Link>
               <Link
-                href={"#"}
+                href={"/news"}
                 className="px-4 py-3 text-black hover:bg-gray-50 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
