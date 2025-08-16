@@ -50,7 +50,7 @@ export const Locations = () => {
       <SlidingDiv direction="bottom" className="flex justify-around w-full">
         <div className="flex flex-col gap-1 items-center">
           <p className="sm:text-xl lg:text-3xl">Call us</p>
-          <p className="text-sm sm:text-base text-neutral-500">+1 (123) 456-7890</p>
+          <p className="text-sm sm:text-base text-neutral-500">+966 114141234</p>
         </div>
         <div className="flex flex-col gap-1 items-center">
           <p className="sm:text-xl lg:text-3xl">Email us</p>

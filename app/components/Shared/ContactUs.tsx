@@ -118,7 +118,7 @@ export const ContactUs = ({
                 <div className="flex flex-col gap-1 md:gap-2">
                   <h4 className="text-lg sm:text-xl font-semibold">Call us</h4>
                   <p className="text-neutral-700 text-sm sm:text-base">
-                    +1 (123) 456-7890
+                    +966 114141234
                   </p>
                 </div>
               </SlidingDiv>
