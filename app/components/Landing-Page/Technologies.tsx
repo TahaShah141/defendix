@@ -67,10 +67,10 @@ const Card = ({
       </div>
       <Link
         href={link}
-        className="text-[#167F3D] flex font-semibold gap-2 items-center mt-4 md:mt-6 lg:mt-8 text-sm sm:text-base"
+        className="text-[#167F3D] flex font-semibold gap-2 items-center mt-4 md:mt-6 lg:mt-8 text-sm sm:text-base group transition-all duration-300 hover:text-green-700"
       >
         Learn More
-        <ArrowRight className="size-4 md:size-6" />
+        <ArrowRight className="w-0 group-hover:w-4 md:group-hover:w-6 transition-all duration-300" />
       </Link>
     </div>
     <img
@@ -92,10 +92,10 @@ const MinimalCard = ({ minimalSrc, title, text, link }: CardProps) => {
           <p className="text-sm sm:text-base">{text}</p>
           <Link
             href={link}
-            className="text-[#87EEAC] flex font-semibold gap-2 items-center mt-3 md:mt-4 lg:mt-6 text-sm sm:text-base"
+            className="text-[#87EEAC] flex font-semibold gap-2 items-center mt-3 md:mt-4 lg:mt-6 text-sm sm:text-base group transition-all duration-300 hover:text-green-300"
           >
             Learn More
-            <ArrowRight className="size-4 md:size-6" />
+          <ArrowRight className="w-0 group-hover:w-5 transition-all duration-300" />
           </Link>
         </div>
       </div>

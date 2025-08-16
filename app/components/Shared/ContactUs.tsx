@@ -237,10 +237,10 @@ export const ContactUs = ({
                 <Button
                   type="submit"
                   disabled={form.formState.isSubmitting}
-                  className="w-full bg-white text-[#167F3D] py-3 px-6 rounded-xl font-semibold flex items-center justify-center gap-2 hover:bg-gray-100 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed text-sm sm:text-base"
+                  className="w-full bg-white text-[#167F3D] py-3 px-6 rounded-xl font-semibold flex items-center justify-center gap-2 hover:bg-gray-100 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed text-sm sm:text-base group"
                 >
                   {form.formState.isSubmitting ? "Sending..." : "Send message"}
-                  <ArrowRight className="size-4" />
+                  <ArrowRight className="size-4 w-0 group-hover:w-4 transition-all duration-300" />
                 </Button>
               </form>
             </Form>

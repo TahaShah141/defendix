@@ -1,8 +1,9 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
-import Link from "next/link";
 import { Menu, X } from "lucide-react";
+import React, { useEffect, useState } from "react";
+
+import Link from "next/link";
 
 export const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -56,7 +57,7 @@ export const Navbar = () => {
           <Link
             href={"/contact"}
             className={`p-2 px-3 rounded-lg transition-colors duration-300 ${
-              scrolled ? "bg-[#167F3D] text-white" : "bg-primary text-black"
+              scrolled ? "bg-[#167F3D] text-white hover:bg-primary hover:text-black" : "bg-primary text-black hover:bg-white"
             }`}
           >
             Contact Us

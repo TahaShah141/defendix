@@ -65,9 +65,9 @@ export const FAQ = () => {
             <AccordionItem
               key={faq.id}
               value={faq.id}
-              className="flex flex-col gap-2 p-3 md:p-4 rounded-2xl md:rounded-[20px] border-2 border-[#ECECEC] data-[state=open]:border-[#17A249] data-[state=open]:bg-[#F7FDFB] "
+              className="flex flex-col gap-2 p-3 md:p-4 rounded-2xl md:rounded-[20px] border-2 border-[#ECECEC] data-[state=open]:border-[#17A249] data-[state=open]:bg-[#F7FDFB] transition-all duration-300"
             >
-              <AccordionTrigger className="w-full flex text-base sm:text-lg md:text-xl font-semibold text-left hover:no-underline">
+              <AccordionTrigger className="w-full flex text-base sm:text-lg md:text-xl font-semibold text-left hover:no-underline transition-all duration-300">
                 {faq.question}
               </AccordionTrigger>
               <AccordionContent className="w-full text-neutral-700 text-sm sm:text-base md:text-lg leading-relaxed">

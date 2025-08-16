@@ -18,10 +18,10 @@ export const ServicesCTA = ({ title, description }: ServiceType["CTA"]) => {
           <div className="flex flex-col sm:flex-row gap-4 md:gap-6 w-full max-w-2xl">
             <Link
               href="/contact"
-              className={`bg-[#167F3D] text-white px-4 md:px-6 lg:px-8 py-3 md:py-4 rounded-xl md:rounded-2xl font-semibold transition-colors duration-200 flex items-center justify-center gap-2 text-sm sm:text-base`}
+              className={`bg-[#167F3D] flex text-white px-6 md:px-8 py-3 md:py-4 rounded-xl md:rounded-2xl font-semibold transition-colors duration-200 text-sm sm:text-base hover:bg-green-700 group`}
             >
               Schedule Technical Consultation
-              <ArrowRight className="size-4 md:size-5 lg:size-6" />
+              <ArrowRight className="ml-2 w-0 group-hover:w-4 md:group-hover:w-6 transition-all duration-300" />
             </Link>
             <Link
               href="#"

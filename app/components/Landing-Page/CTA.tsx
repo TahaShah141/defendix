@@ -31,10 +31,10 @@ export const CTA = ({ isProduct = false }: CTAProps) => {
           <div className="flex flex-col sm:flex-row gap-4 md:gap-6">
             <Link
               href="/services"
-              className={`bg-[#167F3D] text-white px-6 md:px-8 py-3 md:py-4 rounded-xl md:rounded-2xl font-semibold transition-colors duration-200 text-sm sm:text-base`}
+              className={`bg-[#167F3D] flex text-white px-6 md:px-8 py-3 md:py-4 rounded-xl md:rounded-2xl font-semibold transition-colors duration-200 text-sm sm:text-base hover:bg-green-700 group`}
             >
               Explore our services
-              <ArrowRight className="inline size-4 md:size-6 ml-2" />
+              <ArrowRight className="ml-2 w-0 group-hover:w-4 md:group-hover:w-6 transition-all duration-300" />
             </Link>
             <Link
               href="/contact"

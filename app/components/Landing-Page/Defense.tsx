@@ -92,7 +92,7 @@ export const Defense = () => {
           <button
             key={tab.id}
             onClick={() => setActiveTab(tab.id)}
-            className={`flex-1 px-2 sm:px-4 py-3 text-xs sm:text-sm font-medium transition-all duration-200 border-b-2 whitespace-nowrap ${
+            className={`flex-1 px-2 sm:px-4 py-3 text-xs sm:text-sm font-medium transition-all duration-300 border-b-2 whitespace-nowrap ${
               activeTab === tab.id
                 ? "border-[#167F3D] text-[#167F3D]"
                 : "border-transparent text-neutral-600 hover:text-neutral-800 hover:border-neutral-300"

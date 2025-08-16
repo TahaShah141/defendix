@@ -23,10 +23,10 @@ export const Hero = () => {
             </p>
             <Link
               href={"/services"}
-              className="bg-primary p-2 pl-4 rounded-lg group text-black w-fit flex gap-2 md:gap-4 items-center "
+              className="bg-primary p-2 pl-4 rounded-lg group text-black w-fit flex gap-2 md:gap-4 items-center transition-all duration-300 hover:bg-primary/80"
             >
               Explore our products & solutions
-              <ArrowRight className="w-0 group-hover:w-4 md:group-hover:w-6 group-hover:pr-1 md:group-hover:pr-2 size-4 md:size-6 transition-all duration-300" />
+              <ArrowRight className="w-0 group-hover:w-4 md:group-hover:w-6 transition-all duration-300" />
             </Link>
           </div>
           <div className="relative flex flex-col md:flex-row justify-between items-center p-4 md:p-8 lg:p-12 py-8 md:py-12 lg:py-16 gap-6 md:gap-0">
