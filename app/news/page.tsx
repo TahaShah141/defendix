@@ -1,7 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function NewsPage() {
   return (
@@ -14,7 +14,7 @@ export default function NewsPage() {
       >
         <h1 className="text-5xl font-bold mb-4">Under Construction</h1>
         <p className="text-xl text-gray-400 mb-8">
-          We're working hard to bring you something amazing. Stay tuned!
+          {"We're working hard to bring you something amazing. Stay tuned!"}
         </p>
         <Link
           href="/"
