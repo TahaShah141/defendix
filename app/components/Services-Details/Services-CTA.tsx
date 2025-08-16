@@ -3,10 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { ServiceType } from "@/lib/services";
+import { SlidingDiv } from "../custom/SlidingDiv";
 
 export const ServicesCTA = ({ title, description }: ServiceType["CTA"]) => {
   return (
-    <div className="p-4 sm:p-6 bg-white">
+    <SlidingDiv direction="top" px={10} className="p-4 sm:p-6 bg-white">
       <div className="bg-cover bg-[center_top_60%] bg-[url('/cta.jpg')] overflow-hidden rounded-[60px] sm:rounded-[80px] md:rounded-[100px] lg:rounded-[120px]">
         <div className="relative z-10 flex bg-black/80 flex-col items-center text-center text-white py-16 sm:py-20 md:py-24 lg:py-[120px] px-4 sm:px-8 md:px-16 lg:px-[120px]">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl max-w-3xl font-bold mb-6 md:mb-8 lg:mb-10">
@@ -32,6 +33,6 @@ export const ServicesCTA = ({ title, description }: ServiceType["CTA"]) => {
           </div>
         </div>
       </div>
-    </div>
+    </SlidingDiv>
   );
 };

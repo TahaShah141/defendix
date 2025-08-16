@@ -1,6 +1,7 @@
 import { CheckCircle2 } from "lucide-react";
 import React from "react";
 import { ServiceType } from "@/lib/services";
+import { SlidingDiv } from "../custom/SlidingDiv";
 
 const Card = ({ icon, points, title }: ServiceType["capabilities"][0]) => {
   return (
@@ -48,14 +49,14 @@ export const ServiceCapabilities = ({
 }) => {
   return (
     <div className="bg-white text-black flex flex-col gap-8 md:gap-10 lg:gap-12 py-16 md:py-24 lg:py-32 items-center px-4 sm:px-8">
-      <h3 className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl max-w-5xl">
+      <SlidingDiv direction="top" px={10} className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl max-w-5xl">
         {"Technical Capabilities"}
-      </h3>
-      <div className="flex flex-col lg:flex-row w-full max-w-7xl gap-6 md:gap-8 lg:gap-10">
+      </SlidingDiv>
+      <SlidingDiv className="flex flex-col lg:flex-row w-full max-w-7xl gap-6 md:gap-8 lg:gap-10">
         {capabilities.map((c, i) => (
           <Card {...c} key={i} />
         ))}
-      </div>
+      </SlidingDiv>
     </div>
   );
 };

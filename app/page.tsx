@@ -1,3 +1,5 @@
+"use client"
+
 import { CTA } from "./components/Landing-Page/CTA";
 import { Choose } from "./components/Landing-Page/Choose";
 import { ContactUs } from "./components/Shared/ContactUs";

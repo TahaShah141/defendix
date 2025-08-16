@@ -13,6 +13,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import React from "react";
+import { SlidingDiv } from "../custom/SlidingDiv";
 import { Textarea } from "@/components/ui/textarea";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -60,17 +61,17 @@ export const ContactUs = ({
     <div className="bg-white text-black px-4 sm:px-8 md:px-12 lg:px-20 py-16 md:py-24 lg:py-[120px]">
       {showPill && (
         <div className="flex flex-col items-center gap-6 md:gap-8 lg:gap-10 mb-8 md:mb-10">
-          <h2 className="border-[#DCFCE7] bg-[#F0FDF4] border text-xs sm:text-sm tracking-wide rounded-full px-3 md:px-4 py-2 md:py-3 uppercase">
+          <SlidingDiv direction="top" px={10} className="border-[#DCFCE7] bg-[#F0FDF4] border text-xs sm:text-sm tracking-wide rounded-full px-3 md:px-4 py-2 md:py-3 uppercase">
             GET IN TOUCH
-          </h2>
-          <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center">
+          </SlidingDiv>
+          <SlidingDiv direction="top" px={10} delay={0.1} className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center">
             Contact us
-          </h3>
-          <p className="text-center max-w-4xl text-sm sm:text-base md:text-lg text-neutral-700">
+          </SlidingDiv>
+          <SlidingDiv direction="top" px={10} delay={0.2} className="text-center max-w-4xl text-sm sm:text-base md:text-lg text-neutral-700">
             {
               "We'd love to hear from you! Reach out to us with your inquiries, partnership opportunities, or any questions you may have."
             }
-          </p>
+          </SlidingDiv>
         </div>
       )}
 
@@ -84,7 +85,7 @@ export const ContactUs = ({
         {showInfo ? (
           <div className="flex-1 flex flex-col gap-6 md:gap-8 mb-8 lg:mb-0">
             <div className="flex flex-col gap-6 md:gap-8">
-              <div className="flex gap-3 md:gap-4 items-start">
+              <SlidingDiv className="flex gap-3 md:gap-4 items-start">
                 <MapPin className="size-5 md:size-6 text-[#167F3D] mt-1 flex-shrink-0" />
                 <div className="flex flex-col gap-1 md:gap-2">
                   <h4 className="text-lg sm:text-xl font-semibold">
@@ -100,9 +101,9 @@ export const ContactUs = ({
                     <p>Postal code 12345, Pakistan</p>
                   </div>
                 </div>
-              </div>
+              </SlidingDiv>
 
-              <div className="flex gap-3 md:gap-4 items-start">
+              <SlidingDiv delay={0.2} className="flex gap-3 md:gap-4 items-start">
                 <Mail className="size-5 md:size-6 text-[#167F3D] mt-1 flex-shrink-0" />
                 <div className="flex flex-col gap-1 md:gap-2">
                   <h4 className="text-lg sm:text-xl font-semibold">Email us</h4>
@@ -110,9 +111,9 @@ export const ContactUs = ({
                     info@defendixtechnologies.com
                   </p>
                 </div>
-              </div>
+              </SlidingDiv>
 
-              <div className="flex gap-3 md:gap-4 items-start">
+              <SlidingDiv delay={0.4} className="flex gap-3 md:gap-4 items-start">
                 <Phone className="size-5 md:size-6 text-[#167F3D] mt-1 flex-shrink-0" />
                 <div className="flex flex-col gap-1 md:gap-2">
                   <h4 className="text-lg sm:text-xl font-semibold">Call us</h4>
@@ -120,20 +121,20 @@ export const ContactUs = ({
                     +1 (123) 456-7890
                   </p>
                 </div>
-              </div>
+              </SlidingDiv>
             </div>
           </div>
         ) : (
-          <div className="flex-1 bg-red-500 mb-6 rounded-xl lg:mb-0 lg:rounded-l-4xl lg:rounded-r-none overflow-hidden">
+          <SlidingDiv className="flex-1 bg-red-500 mb-6 rounded-xl lg:mb-0 lg:rounded-l-4xl lg:rounded-r-none overflow-hidden">
             <img
               src="/contact-banner.png"
               alt=""
               className="w-full h-48 md:h-64 lg:h-full object-cover"
             />
-          </div>
+          </SlidingDiv>
         )}
 
-        <div className="flex-1">
+        <SlidingDiv direction="right" className="flex-1">
           <div
             className={`bg-[#167F3D] rounded-2xl  ${
               showInfo ? "lg:rounded-4xl" : "lg:rounded-r-4xl lg:rounded-l-none"
@@ -245,7 +246,7 @@ export const ContactUs = ({
               </form>
             </Form>
           </div>
-        </div>
+        </SlidingDiv>
       </div>
     </div>
   );

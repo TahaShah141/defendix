@@ -1,5 +1,6 @@
 import React from "react";
 import { ServiceType } from "@/lib/services";
+import { SlidingDiv } from "../custom/SlidingDiv";
 
 const Card = ({
   icon,
@@ -26,17 +27,17 @@ export const ServiceOverview = ({
 }: ServiceType["overview"]) => {
   return (
     <div className="bg-white text-black flex flex-col gap-8 md:gap-12 lg:gap-14 px-4 sm:px-8 md:px-12 lg:px-20 py-16 md:py-24 lg:py-32 items-center">
-      <h3 className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl max-w-5xl">
+      <SlidingDiv direction="top" px={10} className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl max-w-5xl">
         {heading}
-      </h3>
-      <p className="text-center max-w-5xl text-sm sm:text-base md:text-lg lg:text-xl text-neutral-600">
+      </SlidingDiv>
+      <SlidingDiv direction="top" px={10} delay={0.1} className="text-center max-w-5xl text-sm sm:text-base md:text-lg lg:text-xl text-neutral-600">
         {description}
-      </p>
-      <div className="flex flex-col md:flex-row w-full gap-4 md:gap-6 max-w-7xl">
+      </SlidingDiv>
+      <SlidingDiv delay={0.3} className="flex flex-col md:flex-row w-full gap-4 md:gap-6 max-w-7xl">
         {points.map((p, i) => (
           <Card {...p} key={i} />
         ))}
-      </div>
+      </SlidingDiv>
     </div>
   );
 };

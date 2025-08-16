@@ -1,3 +1,5 @@
+"use client"
+
 import { AboutHero } from "../components/About/AboutHero";
 import { CTA } from "../components/Landing-Page/CTA";
 import { Founders } from "../components/About/Founders";

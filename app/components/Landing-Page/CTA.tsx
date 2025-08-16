@@ -2,13 +2,14 @@ import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { SlidingDiv } from "../custom/SlidingDiv";
 
 type CTAProps = {
   isProduct?: boolean;
 };
 export const CTA = ({ isProduct = false }: CTAProps) => {
   return (
-    <div className="p-3 sm:p-4 md:p-6 bg-white">
+    <SlidingDiv direction="bottom" className="p-3 sm:p-4 md:p-6 bg-white">
       <div className="relative overflow-hidden rounded-[40px] sm:rounded-[60px] md:rounded-[80px] lg:rounded-[120px] bg-[#167F3D]">
         <Image
           src="/cta.jpg"
@@ -45,6 +46,6 @@ export const CTA = ({ isProduct = false }: CTAProps) => {
           </div>
         </div>
       </div>
-    </div>
+    </SlidingDiv>
   );
 };

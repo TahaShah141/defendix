@@ -1,3 +1,5 @@
+"use client"
+
 import { CTA } from "../components/Landing-Page/CTA";
 import { Industries } from "../components/Services/Industries";
 import { ProductHero } from "../components/Services/Product-Hero";

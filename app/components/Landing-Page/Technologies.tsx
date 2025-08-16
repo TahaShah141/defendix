@@ -13,6 +13,7 @@ import {
 import React, { ReactNode } from "react";
 
 import Link from "next/link";
+import { SlidingDiv } from "../custom/SlidingDiv";
 
 type CardProps = {
   src: string;
@@ -33,7 +34,7 @@ const Card = ({
   points,
   link,
 }: CardProps & { flipped: boolean }) => (
-  <div
+  <SlidingDiv
     className={`flex flex-col-reverse ${
       flipped ? "lg:flex-row-reverse" : "lg:flex-row"
     } gap-8 lg:gap-16 items-center`}
@@ -77,12 +78,12 @@ const Card = ({
       src={src}
       className="w-full lg:w-auto h-auto max-h-[300px] md:max-h-[400px] lg:max-h-[600px] flex-1 rounded-2xl lg:rounded-4xl overflow-hidden object-cover"
     />
-  </div>
+  </SlidingDiv>
 );
 
 const MinimalCard = ({ minimalSrc, title, text, link }: CardProps) => {
   return (
-    <div
+    <SlidingDiv
       className="flex-1 min-w-[280px] w-full sm:max-w-md aspect-[3/4] bg-cover bg-center rounded-xl md:rounded-2xl overflow-hidden relative"
       style={{ backgroundImage: `url(${minimalSrc})` }}
     >
@@ -99,7 +100,7 @@ const MinimalCard = ({ minimalSrc, title, text, link }: CardProps) => {
           </Link>
         </div>
       </div>
-    </div>
+    </SlidingDiv>
   );
 };
 
@@ -174,17 +175,17 @@ const cards: CardProps[] = [
 export const Technologies = ({ minimal = false }: { minimal?: boolean }) => {
   return (
     <div className="bg-white text-black flex flex-col gap-8 md:gap-12 lg:gap-14 px-4 sm:px-8 md:px-12 lg:px-20 py-16 md:py-24 lg:py-32 items-center">
-      <h2 className="border-[#DCFCE7] bg-[#F0FDF4] border text-xs sm:text-sm tracking-wide rounded-full px-3 md:px-4 py-2 md:py-3 uppercase">
+      <SlidingDiv direction="top" px={10} className="border-[#DCFCE7] bg-[#F0FDF4] border text-xs sm:text-sm tracking-wide rounded-full px-3 md:px-4 py-2 md:py-3 uppercase">
         Our Core Technologies
-      </h2>
-      <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-center">
+      </SlidingDiv>
+      <SlidingDiv direction="top" px={10} delay={0.1} className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-center">
         Comprehensive Defense Solutions
-      </h3>
-      <p className="text-center max-w-3xl text-sm sm:text-base md:text-lg lg:text-xl text-neutral-600">
+      </SlidingDiv>
+      <SlidingDiv direction="top" px={10} delay={0.2} className="text-center max-w-3xl text-sm sm:text-base md:text-lg lg:text-xl text-neutral-600">
         {
           "Our integrated approach covers all aspects of modern warfare, from command and control to electronic warfare and radar technologies."
         }
-      </p>
+      </SlidingDiv>
       {minimal ? (
         <div className="flex flex-col gap-6 md:gap-8 w-full max-w-7xl">
           <div className="flex flex-col lg:flex-row gap-4 md:gap-6 lg:gap-8 w-full justify-center items-center">

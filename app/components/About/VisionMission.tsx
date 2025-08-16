@@ -1,34 +1,37 @@
 import React from "react";
+import { SlidingDiv } from "../custom/SlidingDiv";
 
 export const VisionMission = () => {
   return (
     <div className="bg-white text-black flex flex-col gap-8 md:gap-12 lg:gap-14 px-4 sm:px-8 md:px-12 lg:px-20 py-16 md:py-24 lg:py-32 items-center">
       <div className="flex flex-col lg:flex-row gap-8 lg:gap-14 items-center justify-between">
         <div className="flex flex-col gap-3 md:gap-4 text-neutral-600 flex-1">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-black mb-4 md:mb-6 lg:mb-8">
+          <SlidingDiv className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-black mb-4 md:mb-6 lg:mb-8">
             Defending the Future,
             <br />
             Today.
-          </h2>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl">
+          </SlidingDiv>
+          <SlidingDiv className="text-sm sm:text-base md:text-lg lg:text-xl">
             {
               "Modern warfare demands multi-domain strategy where relatively less superior weaponry when networked in an efficient way can beat the state of the art standalone war machines. The central component powering such a multi-domain strategy is Network Centric Warfare (NCW). "
             }
-          </p>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl">
+          </SlidingDiv>
+          <SlidingDiv delay={0.1} className="text-sm sm:text-base md:text-lg lg:text-xl">
             {
               "With our 2 decades of experience in design, development and deployment of NCW solutions, DefendiX team is rightly positioned to design and build innovative solutions with critical technologies including but not limited to NCW Architecture, C4I (Command, Control, Communication and Computer), Software Defined Radio (SDR), Electronic Warfare (EW) and Phased Array Radar Technologies."
             }
-          </p>
+          </SlidingDiv>
         </div>
-        <img
-          src="/about-overview.png"
-          alt=""
-          className="rounded-2xl lg:rounded-4xl object-cover w-full lg:w-[50%] aspect-[4/3]"
-        />
+        <SlidingDiv direction="right" className="w-full lg:w-[50%]">
+          <img
+            src="/about-overview.png"
+            alt=""
+            className="rounded-2xl lg:rounded-4xl object-cover w-full aspect-[4/3]"
+          />
+        </SlidingDiv>
       </div>
       <div className="flex flex-col lg:flex-row w-full gap-6 md:gap-8 lg:gap-10">
-        <div className='flex-1 flex flex-col gap-6 md:gap-8 lg:gap-10 rounded-2xl lg:rounded-4xl overflow-hidden bg-[url("/about-vision.png")] bg-center bg-cover text-white'>
+        <SlidingDiv className='flex-1 flex flex-col gap-6 md:gap-8 lg:gap-10 rounded-2xl lg:rounded-4xl overflow-hidden bg-[url("/about-vision.png")] bg-center bg-cover text-white'>
           <div className="flex flex-col gap-6 md:gap-8 lg:gap-10 p-6 md:p-8 lg:p-12 size-full bg-black/50">
             <svg
               className="size-8 md:size-10"
@@ -49,8 +52,8 @@ export const VisionMission = () => {
               }
             </p>
           </div>
-        </div>
-        <div className='flex-1 flex flex-col gap-6 md:gap-8 lg:gap-10 rounded-2xl lg:rounded-4xl overflow-hidden bg-[url("/about-mission.png")] bg-center bg-cover text-white'>
+        </SlidingDiv>
+        <SlidingDiv direction="right" className='flex-1 flex flex-col gap-6 md:gap-8 lg:gap-10 rounded-2xl lg:rounded-4xl overflow-hidden bg-[url("/about-mission.png")] bg-center bg-cover text-white'>
           <div className="flex flex-col gap-6 md:gap-8 lg:gap-10 p-6 md:p-8 lg:p-12 size-full bg-black/50">
             <svg
               className="size-8 md:size-10"
@@ -79,7 +82,7 @@ export const VisionMission = () => {
               }
             </p>
           </div>
-        </div>
+        </SlidingDiv>
       </div>
     </div>
   );

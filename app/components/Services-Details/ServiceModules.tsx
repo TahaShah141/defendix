@@ -1,6 +1,7 @@
 import { CheckCircle2 } from "lucide-react";
 import React from "react";
 import { ServiceType } from "@/lib/services";
+import { SlidingDiv } from "../custom/SlidingDiv";
 
 const Module = ({
   flipped,
@@ -9,9 +10,10 @@ const Module = ({
   text,
   points,
   src,
-}: ServiceType["modules"][0] & { flipped: boolean }) => {
+  i
+}: ServiceType["modules"][0] & { flipped: boolean, i: number }) => {
   return (
-    <div className={`flex ${flipped && "lg:justify-end"} px-4 sm:px-8 md:px-0`}>
+    <SlidingDiv delay={i*0.01} className={`flex ${flipped && "lg:justify-end"} px-4 sm:px-8 md:px-0`}>
       <div
         className={`flex max-w-full lg:max-w-9/10 bg-[#F3F3F3] gap-4 md:gap-8 lg:gap-20 p-4 sm:p-6 md:p-8 lg:p-10 items-center flex-col lg:flex-row ${
           flipped && "lg:flex-row-reverse"
@@ -45,7 +47,7 @@ const Module = ({
           className="rounded-2xl lg:rounded-full overflow-hidden object-cover lg:aspect-square w-full lg:max-w-sm"
         />
       </div>
-    </div>
+    </SlidingDiv>
   );
 };
 
@@ -58,13 +60,13 @@ export const ServiceModules = ({
 }) => {
   return (
     <div className="bg-white text-black flex flex-col gap-8 md:gap-10 lg:gap-12 py-16 md:py-24 lg:py-32 items-center">
-      <h3 className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl max-w-5xl px-4 sm:px-8">
+      <SlidingDiv direction="top" px={10} className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl max-w-5xl px-4 sm:px-8">
         {"Core System Modules"}
-      </h3>
-      <p className="text-center max-w-5xl text-sm sm:text-base md:text-lg lg:text-xl text-neutral-600 px-4 sm:px-8">{`Integrated components that form the complete ${hero.title}`}</p>
+      </SlidingDiv>
+      <SlidingDiv direction="top" px={10} delay={0.1} className="text-center max-w-5xl text-sm sm:text-base md:text-lg lg:text-xl text-neutral-600 px-4 sm:px-8">{`Integrated components that form the complete ${hero.title}`}</SlidingDiv>
       <div className="flex flex-col w-full gap-8 md:gap-10 lg:gap-12">
         {modules.map((m, i) => (
-          <Module {...m} flipped={!!(i % 2)} key={i} />
+          <Module {...m} flipped={!!(i % 2)} key={i} i={i}/>
         ))}
       </div>
     </div>
