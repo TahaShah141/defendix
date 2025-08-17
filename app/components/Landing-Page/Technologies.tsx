@@ -88,7 +88,7 @@ const MinimalCard = ({ minimalSrc, title, text, link }: CardProps) => {
       style={{ backgroundImage: `url(${minimalSrc})` }}
     >
       <div className="absolute inset-0 bg-black/40 p-3 md:p-5 flex flex-col justify-end">
-        <div className="backdrop-blur-md bg-gradient-to-br from-white/5 to-white/10 w-full p-3 md:p-4 rounded-xl md:rounded-2xl border border-white/20 flex flex-col justify-center gap-3 md:gap-4 lg:gap-6 text-white min-h-48 md:min-h-56 lg:min-h-64">
+        <div className="backdrop-blur-md hover:shadow-sm shadow-primary transition-all duration-300 bg-gradient-to-br from-white/5 to-white/10 w-full p-3 md:p-4 rounded-xl md:rounded-2xl border border-white/20 flex flex-col justify-center gap-3 md:gap-4 lg:gap-6 text-white min-h-48 md:min-h-56 lg:min-h-64">
           <p className="text-lg sm:text-xl md:text-2xl font-bold">{title}</p>
           <p className="text-sm sm:text-base">{text}</p>
           <Link

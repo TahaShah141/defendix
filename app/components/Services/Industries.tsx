@@ -7,21 +7,21 @@ import { SlidingDiv } from "../custom/SlidingDiv";
 const industries = [
   {
     id: 1,
-    src: "/industries/defense.png",
+    src: "/ground.jpg",
     title: "Defense Forces",
     description:
       "Army, Navy, Air Force, and Joint Commands relying on integrated CZIISR, radar, and EW systems for real-time operational superiority.",
   },
   {
     id: 2,
-    src: "/industries/military.png",
+    src: "/jcu.jpg",
     title: "Military R&D Facilities",
     description:
       "Institutes focused on development, integration, and simulation of next-generation NCW capabilities in secure environments.",
   },
   {
     id: 3,
-    src: "/industries/security.png",
+    src: "/about-hero.png",
     title: "National Security",
     description:
       "National security agencies and defense ministries requiring secure communication, surveillance, and threat detection systems.",
@@ -35,7 +35,7 @@ const industries = [
   },
   {
     id: 5,
-    src: "/industries/aviation.png",
+    src: "/air.jpg",
     title: "Aerospace & Aviation",
     description:
       "Airborne platforms demanding lightweight, multi-function radar systems, SDRs, and electronic warfare solutions for mission-critical operations.",
@@ -64,7 +64,7 @@ const IndustryCard = ({ industry, i }: { industry: (typeof industries)[0] } & { 
         className="relative w-full h-[200px] sm:h-[220px] md:h-[250px] bg-cover bg-[center_top_30%] flex items-center justify-center"
         style={{ backgroundImage: `url(${industry.src})` }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-white to-transparent"></div>
+        {/* <div className="absolute inset-0 bg-gradient-to-b from-white to-transparent"></div> */}
       </div>
     </div>
   </SlidingDiv>

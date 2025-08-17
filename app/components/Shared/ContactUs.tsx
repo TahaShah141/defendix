@@ -92,13 +92,13 @@ export const ContactUs = ({
                     Our offices
                   </h4>
                   <div className="text-neutral-700 leading-relaxed text-sm sm:text-base">
-                    <p>123 Business Ave, Suite 400, Riyadh, Riyadh</p>
-                    <p>Postal code 12345, Kingdom of Saudi Arabia</p>
+                    <p>1111 King Abdulaziz Road, Riyadh, Saudia Arabia</p>
+                    {/* <p>Postal code 12345, Kingdom of Saudi Arabia</p> 
                     <br />
                     <p>
                       123 Business Ave, Suite 400, Islamabad, Federal Capital
                     </p>
-                    <p>Postal code 12345, Pakistan</p>
+                    <p>Postal code 12345, Pakistan</p> */}
                   </div>
                 </div>
               </SlidingDiv>
@@ -113,7 +113,7 @@ export const ContactUs = ({
                 </div>
               </SlidingDiv>
 
-              <SlidingDiv delay={0.4} className="flex gap-3 md:gap-4 items-start">
+              {/* <SlidingDiv delay={0.4} className="flex gap-3 md:gap-4 items-start">
                 <Phone className="size-5 md:size-6 text-[#167F3D] mt-1 flex-shrink-0" />
                 <div className="flex flex-col gap-1 md:gap-2">
                   <h4 className="text-lg sm:text-xl font-semibold">Call us</h4>
@@ -121,7 +121,7 @@ export const ContactUs = ({
                     +966 114141234
                   </p>
                 </div>
-              </SlidingDiv>
+              </SlidingDiv> */}
             </div>
           </div>
         ) : (

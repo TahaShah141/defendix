@@ -8,7 +8,7 @@ import { SlidingDiv } from "../custom/SlidingDiv";
 const tabs = [
   {
     id: "air-forces",
-    src: "/defense.png",
+    src: "/air.jpg",
     label: "Air Forces",
     content: {
       title: "Air Forces",
@@ -23,7 +23,7 @@ const tabs = [
   },
   {
     id: "naval-forces",
-    src: "/defense.png",
+    src: "/navy.jpg",
     label: "Naval Forces",
     content: {
       title: "Naval Forces",
@@ -38,7 +38,7 @@ const tabs = [
   },
   {
     id: "ground-forces",
-    src: "/defense.png",
+    src: "/ground.jpg",
     label: "Ground Forces",
     content: {
       title: "Ground Forces",
@@ -53,7 +53,7 @@ const tabs = [
   },
   {
     id: "joint-command",
-    src: "/defense.png",
+    src: "/jcu.jpg",
     label: "Joint Command Units",
     content: {
       title: "Joint Command Units",

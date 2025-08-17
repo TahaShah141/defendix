@@ -90,12 +90,12 @@ export const Footer = () => {
               info@defendixtechnologies.com
             </span>
           </div>
-          <div className="flex gap-3 items-start">
+          {/* <div className="flex gap-3 items-start">
             <Phone className="size-4 md:size-5 text-[#167F3D] mt-0.5 flex-shrink-0" />
             <span className="text-neutral-400 text-sm sm:text-base">
               +966 114141234
             </span>
-          </div>
+          </div> */}
           <div className="flex gap-3 items-start">
             <MapPin className="size-4 md:size-5 text-[#167F3D] mt-0.5 flex-shrink-0" />
             <div className="text-neutral-400 text-sm sm:text-base">

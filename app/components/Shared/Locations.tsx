@@ -48,10 +48,10 @@ export const Locations = () => {
         <img src={'/map.png'} className="w-full"/>
       </SlidingDiv>
       <SlidingDiv direction="bottom" className="flex justify-around w-full">
-        <div className="flex flex-col gap-1 items-center">
+        {/* <div className="flex flex-col gap-1 items-center">
           <p className="sm:text-xl lg:text-3xl">Call us</p>
           <p className="text-sm sm:text-base text-neutral-500">+966 114141234</p>
-        </div>
+        </div> */}
         <div className="flex flex-col gap-1 items-center">
           <p className="sm:text-xl lg:text-3xl">Email us</p>
           <p className="text-sm sm:text-base text-neutral-500">info@defendixtech.com</p>

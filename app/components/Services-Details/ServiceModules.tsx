@@ -13,7 +13,7 @@ const Module = ({
   i
 }: ServiceType["modules"][0] & { flipped: boolean, i: number }) => {
   return (
-    <SlidingDiv delay={i*0.01} className={`flex ${flipped && "lg:justify-end"} px-4 sm:px-8 md:px-0`}>
+    <SlidingDiv delay={i*0.01} direction={flipped ? "right" : "left"} className={`flex ${flipped && "lg:justify-end"} px-4 sm:px-8 md:px-0`}>
       <div
         className={`flex max-w-full lg:max-w-9/10 bg-[#F3F3F3] gap-4 md:gap-8 lg:gap-20 p-4 sm:p-6 md:p-8 lg:p-10 items-center flex-col lg:flex-row ${
           flipped && "lg:flex-row-reverse"
