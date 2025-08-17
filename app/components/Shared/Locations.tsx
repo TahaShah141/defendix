@@ -15,7 +15,7 @@ export const Locations = () => {
         {"We have offices and teams all around the world."}
       </SlidingDiv>
       <SlidingDiv className="relative w-full">
-        <HoverCard>
+        <HoverCard defaultOpen>
           <HoverCardTrigger className="absolute top-[48%] left-[60%]">
             <div className="bg-green-200/50 size-8 rounded-full p-1">
               <div className="bg-green-300/50 size-full rounded-full p-1.5">
@@ -45,7 +45,7 @@ export const Locations = () => {
             <p className="text-center">NUST H-12, Islamabad, Pakistan</p>
           </HoverCardContent>
         </HoverCard>
-        <img src={'/map.png'} className="w-full"/>
+        <img src={'/Map.png'} className="w-full"/>
       </SlidingDiv>
       <SlidingDiv direction="bottom" className="flex justify-around w-full">
         {/* <div className="flex flex-col gap-1 items-center">

@@ -145,9 +145,9 @@ const C4ISRService: ServiceType = {
         "Voice Switching System for command center-field communication",
         "Audio Video Recording System for tracks, audio, and video logs",
         "Radar Registration Module for calibration and reference alignment",
-        "Seamless integration with C4l system",
-        "Recording media state indication",
-        "Standalone module for commercial applications",
+        "Seamless integration with other C4I systems",
+        "War Gaming",
+        "Radar Upgrade",
       ],
     },
     // {
@@ -190,17 +190,17 @@ const C4ISRService: ServiceType = {
         {
           type: "list",
           name: "Maneuver Tracking",
-          value: "65,000+",
-        },
-        {
-          type: "list",
-          name: "Vector Areas",
           value: "7G Sustained",
         },
         {
           type: "list",
-          name: "War Game Players",
-          value: "250+ per team",
+          name: "Vector Areas",
+          value: "65000+",
+        },
+        {
+          type: "list",
+          name: "Symbols",
+          value: "15000+",
         },
       ],
     },
@@ -442,7 +442,7 @@ const EWService: ServiceType = {
       text: "Advanced electronic intelligence gathering and analysis systems for comprehensive threat assessment.",
       points: [
         "Enemy radar signal detection and analysis",
-        "Communication signal interception",
+        // "Communication signal interception",
         "Threat library development and maintenance",
         "Real-time signal classification",
         "Multi-platform integration capability",

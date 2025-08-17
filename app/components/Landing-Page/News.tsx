@@ -1,7 +1,9 @@
-import React from "react";
+import { ArrowRight, CalendarDays, Clock, Newspaper, Sparkles } from "lucide-react";
+
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import React from "react";
+import { SlidingDiv } from "../custom/SlidingDiv";
 
 const newsArticles = [
   {
@@ -65,19 +67,56 @@ export const News = () => {
   return (
     <div className="bg-white text-black flex flex-col gap-8 md:gap-10 px-4 sm:px-8 md:px-12 lg:px-20 py-16 md:py-24 lg:py-[120px] items-center">
       <div className="flex flex-col items-center gap-6 md:gap-8 lg:gap-10 mb-6 md:mb-8 lg:mb-10">
-        <h2 className="border-[#DCFCE7] bg-[#F0FDF4] border text-xs sm:text-sm tracking-wide rounded-full px-3 md:px-4 py-2 md:py-3 uppercase">
+        <SlidingDiv direction="top" px={10} className="border-[#DCFCE7] bg-[#F0FDF4] border text-xs sm:text-sm tracking-wide rounded-full px-3 md:px-4 py-2 md:py-3 uppercase">
           STAY UPDATED
-        </h2>
-        <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center">
+        </SlidingDiv>
+        <SlidingDiv direction="top" px={10} delay={0.1} className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center">
           News & Insights
-        </h3>
-        <p className="text-center max-w-4xl text-sm sm:text-base md:text-lg text-neutral-700">
+        </SlidingDiv>
+        <SlidingDiv direction="top" px={10} delay={0.2} className="text-center max-w-4xl text-sm sm:text-base md:text-lg text-neutral-700">
           Explore the latest news, technical articles, and insights from the
           world of defense technology and DefendiX.
-        </p>
+        </SlidingDiv>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl w-full mb-8 md:mb-10">
+      {/* Empty state */}
+      <SlidingDiv direction="top" px={10} delay={0.15} className="w-full max-w-4xl">
+        <section
+          aria-labelledby="news-empty-title"
+          className="relative isolate overflow-hidden rounded-3xl border border-[#DCFCE7] bg-gradient-to-b from-[#F0FDF4] to-white p-6 sm:p-8 md:p-10 shadow-sm"
+        >
+          <div className="absolute -right-6 -top-6 md:-right-8 md:-top-8 opacity-20 md:opacity-30">
+            <Sparkles className="size-24 md:size-32" aria-hidden="true" />
+          </div>
+
+          <div className="flex flex-col items-center text-center gap-4 md:gap-5">
+            <div className="flex items-center justify-center size-14 sm:size-16 md:size-20 rounded-2xl border border-[#BBF7D0] bg-white">
+              <Newspaper className="size-7 sm:size-8 md:size-9 text-[#167F3D]" aria-hidden="true" />
+            </div>
+
+            <h3 id="news-empty-title" className="text-xl sm:text-2xl md:text-3xl font-bold">
+              Fresh news are on the way
+            </h3>
+
+            <p className="max-w-2xl text-neutral-700 text-sm sm:text-base md:text-lg leading-relaxed">
+              {"We're curating the latest updates from DefendiX—technical deep dives, product launches, and mission highlights. Check back soon for our first stories."}
+            </p>
+
+            <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 text-sm sm:text-base">
+              <div className="flex items-center gap-2 rounded-full border border-[#BBF7D0] bg-white px-3 py-1.5">
+                <CalendarDays className="size-4" aria-hidden="true" />
+                <span>Updated regularly</span>
+              </div>
+              <div className="flex items-center gap-2 rounded-full border border-[#BBF7D0] bg-white px-3 py-1.5">
+                <Clock className="size-4" aria-hidden="true" />
+                <span>First posts coming soon</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </SlidingDiv>
+
+      {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl w-full mb-8 md:mb-10">
         {newsArticles.map((article) => (
           <NewsCard key={article.id} article={article} />
         ))}
@@ -88,7 +127,8 @@ export const News = () => {
         className="flex items-center justify-center gap-2.5 px-3 py-3 pr-4 rounded-xl border border-[#BBF7D0] bg-white text-primary font-semibold text-sm sm:text-base md:text-lg"
       >
         See more
-      </Link>
+      </Link> */}
+
     </div>
   );
 };

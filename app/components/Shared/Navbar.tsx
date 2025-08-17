@@ -27,11 +27,13 @@ export const Navbar = () => {
       }`}
     >
       <div className="container flex justify-between items-center py-2 px-4">
-        <img
-          src={scrolled ? "/logoBlack.png" : "/logo.png"}
-          className="h-10 md:h-14 transition-opacity duration-300"
-          alt="Defendix logo"
-        />
+        <Link href="/" className="flex items-center">
+          <img
+            src={scrolled ? "/logoBlack.png" : "/logo.png"}
+            className="h-10 md:h-14 transition-opacity duration-300"
+            alt="Defendix logo"
+          />
+        </Link>
 
         {/* Desktop Navigation */}
         <div
