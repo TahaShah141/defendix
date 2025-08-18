@@ -8,7 +8,7 @@ import { SlidingDiv } from "../custom/SlidingDiv";
 const tabs = [
   {
     id: "air-forces",
-    src: "/air.jpg",
+    src: "/air.png",
     label: "Air Forces",
     content: {
       title: "Air Forces",
