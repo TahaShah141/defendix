@@ -92,7 +92,7 @@ export const ContactUs = ({
                     Our offices
                   </h4>
                   <div className="text-neutral-700 leading-relaxed text-sm sm:text-base">
-                    <p>1111 King Abdulaziz Road, Riyadh, Saudia Arabia</p>
+                    <p>7549 Abi Bakr As Siddiq Rd, 4253, An Narjis, Riyadh 13326</p>
                     {/* <p>Postal code 12345, Kingdom of Saudi Arabia</p> 
                     <br />
                     <p>
@@ -127,7 +127,7 @@ export const ContactUs = ({
         ) : (
           <SlidingDiv className="flex-1 bg-red-500 mb-6 rounded-xl lg:mb-0 lg:rounded-l-4xl lg:rounded-r-none overflow-hidden">
             <img
-              src="/contact-banner.png"
+              src="/contact-banner.jpg"
               alt=""
               className="w-full h-48 md:h-64 lg:h-full object-cover"
             />

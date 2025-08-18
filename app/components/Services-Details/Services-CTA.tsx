@@ -24,12 +24,12 @@ export const ServicesCTA = ({ title, description }: ServiceType["CTA"]) => {
               Schedule Technical Consultation
               <ArrowRight className="ml-2 w-0 group-hover:w-4 md:group-hover:w-6 transition-all duration-300" />
             </Link>
-            <Link
+            {/* <Link
               href="#"
               className="border border-white text-white px-4 md:px-6 lg:px-8 py-3 md:py-4 rounded-xl md:rounded-2xl font-semibold hover:bg-white hover:text-black transition-colors duration-200 text-sm sm:text-base"
             >
               Download Technical Specs
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>

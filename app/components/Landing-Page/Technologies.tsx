@@ -149,7 +149,7 @@ const cards: CardProps[] = [
     title: "Phased Array Radar",
     text: "Advanced radar technologies with electronic beam steering capabilities",
     points: [
-      "Multi-Function Radar Capability: Enables simultaneous surveillance, guidance, and tracking using electronic beam steering with no mechanical movement.",
+      "Advanced Electronic Scanning & Control: Radar system engineering and modeling, with beamforming controllers, signal processors, and MMI for precise target detection, tracking, and control without mechanical movement.",
       "Advanced T/R Modules & Antennas: In-house developed T/R modules and AESA antennas across S, C, X, and Ku bands for high-performance, platform-specific deployment.",
       "High-Precision Signal Processing: Features beamforming controllers, digital signal processors, and MMI for real-time target tracking, classification, and threat prioritization.",
     ],
@@ -163,7 +163,7 @@ const cards: CardProps[] = [
     text: "OpenVPX-based control and processing platforms for harsh environments",
     points: [
       "Modular OpenVPX Architecture:  High-speed OpenVPX-based backplane with FMC daughter cards and multi-FPGA modules enabling low-latency, high-bandwidth inter-module communication.",
-      "Real-Time Processing & Synchronization:  Supports beamforming, pulse compression, Doppler processing, with GPS-disciplined timing, Linux-based system software, secure boot, and diagnostics.",
+      "Real-Time Processing & Synchronization: Supports multiple domains such as radar for beam forming, pulse compression, Doppler processing etc.",
       "Developer-Ready & MIL-STD Compliant: Ships with Application Development Kit (ADK) for C/C++, LabVIEW, Python, and meets full MIL-STD requirements for defense environments.",
     ],
     link: "/services/rcpp",

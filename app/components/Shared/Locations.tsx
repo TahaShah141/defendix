@@ -16,7 +16,7 @@ export const Locations = () => {
       </SlidingDiv>
       <SlidingDiv className="relative w-full">
         <HoverCard defaultOpen>
-          <HoverCardTrigger className="absolute top-[48%] left-[60%]">
+          <HoverCardTrigger className="absolute top-[49%] left-[61%]">
             <div className="bg-green-200/50 size-8 rounded-full p-1">
               <div className="bg-green-300/50 size-full rounded-full p-1.5">
                 <div className="bg-green-500/80 size-full rounded-full">
@@ -27,10 +27,10 @@ export const Locations = () => {
           <HoverCardContent side="left" className="flex flex-col gap-2 items-center rounded-3xl">
             <img src="/ksa.png" alt="" className="size-10 rounded-full overflow-hidden border" />
             <p className="text-2xl">Riyadh, KSA</p>
-            <p className="text-center">1111 King Abdulaziz Road, Riyadh, Saudi Arabia</p>
+            <p className="text-center">7549 Abi Bakr As Siddiq Rd, 4253, An Narjis, Riyadh 13326</p>
           </HoverCardContent>
         </HoverCard>
-        <HoverCard>
+        {/* <HoverCard>
           <HoverCardTrigger className="absolute top-[38%] left-[66%]">
             <div className="bg-green-200/50 size-8 rounded-full p-1">
               <div className="bg-green-300/50 size-full rounded-full p-1.5">
@@ -44,7 +44,7 @@ export const Locations = () => {
             <p className="text-2xl">Islamabad, Pakistan</p>
             <p className="text-center">NUST H-12, Islamabad, Pakistan</p>
           </HoverCardContent>
-        </HoverCard>
+        </HoverCard> */}
         <img src={'/Map.png'} className="w-full"/>
       </SlidingDiv>
       <SlidingDiv direction="bottom" className="flex justify-around w-full">

@@ -28,7 +28,7 @@ const industries = [
   },
   {
     id: 4,
-    src: "/industries/border.png",
+    src: "/industries/border.jpeg",
     title: "Border & Coastal Security",
     description:
       "Agencies securing borders and coastlines using real-time tracking, radar surveillance, and interoperable communication networks.",

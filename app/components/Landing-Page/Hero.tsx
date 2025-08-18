@@ -36,7 +36,7 @@ export const Hero = () => {
             <div className="absolute right-1/10 top-0 w-4/5 h-px bg-gradient-to-r from-transparent via-neutral-500 to-transparent hidden md:block" />
             <div className="flex flex-1 flex-col gap-1 items-center">
               <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
-                20+
+                60+
               </p>
               <p className="text-white/75 text-sm sm:text-base md:text-lg lg:text-2xl text-center">
                 Years Combined Experience

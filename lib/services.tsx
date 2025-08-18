@@ -283,7 +283,7 @@ const SDRService: ServiceType = {
       ],
     },
     {
-      src: "/services/sdr/modules/1.png",
+      src: "/services/sdr/modules/1.jpeg",
       icon: <ShieldCheck className="size-full" />,
       title: "Fast Frequency Hopping",
       text: "High-speed frequency hopping for robust anti-jam and low-probability-of-intercept (LPI) communication.",
@@ -311,7 +311,7 @@ const SDRService: ServiceType = {
       ],
     },
     {
-      src: "/services/sdr/modules/3.png",
+      src: "/services/sdr/modules/3.jpeg",
       icon: <ShieldCheck className="size-full" />,
       title: "Custom Waveform Support",
       text: "Field-programmable to deploy and run proprietary or mission-specific waveforms.",
