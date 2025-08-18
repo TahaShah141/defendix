@@ -7,21 +7,21 @@ import { SlidingDiv } from "../custom/SlidingDiv";
 const industries = [
   {
     id: 1,
-    src: "/ground.jpg",
+    src: "/defense.png",
     title: "Defense Forces",
     description:
       "Army, Navy, Air Force, and Joint Commands relying on integrated CZIISR, radar, and EW systems for real-time operational superiority.",
   },
   {
     id: 2,
-    src: "/jcu.jpg",
+    src: "/military.png",
     title: "Military R&D Facilities",
     description:
       "Institutes focused on development, integration, and simulation of next-generation NCW capabilities in secure environments.",
   },
   {
     id: 3,
-    src: "/about-hero.png",
+    src: "/national.png",
     title: "National Security",
     description:
       "National security agencies and defense ministries requiring secure communication, surveillance, and threat detection systems.",
@@ -35,7 +35,7 @@ const industries = [
   },
   {
     id: 5,
-    src: "/air.jpg",
+    src: "/air.png",
     title: "Aerospace & Aviation",
     description:
       "Airborne platforms demanding lightweight, multi-function radar systems, SDRs, and electronic warfare solutions for mission-critical operations.",
