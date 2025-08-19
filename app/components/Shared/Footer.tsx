@@ -87,7 +87,7 @@ export const Footer = () => {
           <div className="flex gap-3 items-start">
             <Mail className="size-4 md:size-5 text-[#167F3D] mt-0.5 flex-shrink-0" />
             <span className="text-neutral-400 text-sm sm:text-base">
-              info@defendixtechnologies.com
+              info@defendixtech.com
             </span>
           </div>
           {/* <div className="flex gap-3 items-start">
@@ -99,8 +99,8 @@ export const Footer = () => {
           <div className="flex gap-3 items-start">
             <MapPin className="size-4 md:size-5 text-[#167F3D] mt-0.5 flex-shrink-0" />
             <div className="text-neutral-400 text-sm sm:text-base">
-              <p>Riyadh, Saudi Arabia</p>
-              <p>Islamabad, Pakistan</p>
+              <p>7549 Abi Bakr As Siddiq Rd, 4253, An Narjis, Riyadh 13326</p>
+              {/* <p>Islamabad, Pakistan</p> */}
             </div>
           </div>
         </SlidingDiv>

@@ -108,7 +108,7 @@ export const ContactUs = ({
                 <div className="flex flex-col gap-1 md:gap-2">
                   <h4 className="text-lg sm:text-xl font-semibold">Email us</h4>
                   <p className="text-neutral-700 text-sm sm:text-base">
-                    info@defendixtechnologies.com
+                    info@defendixtech.com
                   </p>
                 </div>
               </SlidingDiv>
