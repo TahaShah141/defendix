@@ -138,7 +138,7 @@ export const FAQ = () => {
         </SlidingDiv>
       </div>
       <SlidingDiv className="w-full max-w-5xl">
-        <Accordion type="multiple" className="flex flex-col gap-4 md:gap-6">
+        <Accordion type="single" className="flex flex-col gap-4 md:gap-6">
           {currentFaqs.map((faq) => (
             <AccordionItem
               key={faq.id}

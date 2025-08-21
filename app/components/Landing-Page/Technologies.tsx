@@ -95,7 +95,7 @@ const MinimalCard = ({ minimalSrc, title, text, link }: CardProps) => {
             href={link}
             className="text-[#87EEAC] flex font-semibold gap-2 items-center mt-3 md:mt-4 lg:mt-6 text-sm sm:text-base group transition-all duration-300 hover:text-green-300"
           >
-            Learn More
+            Explore More
           <ArrowRight className="w-0 group-hover:w-5 transition-all duration-300" />
           </Link>
         </div>
@@ -193,10 +193,11 @@ export const Technologies = ({ minimal = false }: { minimal?: boolean }) => {
               <MinimalCard {...c} key={i} />
             ))}
           </div>
-          <div className="flex flex-col lg:flex-row gap-4 md:gap-6 lg:gap-8 justify-center items-center">
+          <div className="flex overflow-hidden lg:translate-x-1/6 flex-col lg:flex-row gap-4 md:gap-6 lg:gap-8 justify-center items-center">
             {cards.slice(3).map((c, i) => (
               <MinimalCard {...c} key={i} />
             ))}
+            <div className="flex-1 hidden lg:flex h-full bg-red-500" />
           </div>
         </div>
       ) : (

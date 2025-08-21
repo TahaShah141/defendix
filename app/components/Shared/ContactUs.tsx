@@ -69,7 +69,7 @@ export const ContactUs = ({
           </SlidingDiv>
           <SlidingDiv direction="top" px={10} delay={0.2} className="text-center max-w-4xl text-sm sm:text-base md:text-lg text-neutral-700">
             {
-              "We'd love to hear from you! Reach out to us with your inquiries, partnership opportunities, or any questions you may have."
+              "Reach out to us with your inquiries, partnership opportunities, or any questions you may have."
             }
           </SlidingDiv>
         </div>
@@ -89,7 +89,7 @@ export const ContactUs = ({
                 <MapPin className="size-5 md:size-6 text-[#167F3D] mt-1 flex-shrink-0" />
                 <div className="flex flex-col gap-1 md:gap-2">
                   <h4 className="text-lg sm:text-xl font-semibold">
-                    Our offices
+                    Our office
                   </h4>
                   <div className="text-neutral-700 leading-relaxed text-sm sm:text-base">
                     <p>7549 Abi Bakr As Siddiq Rd, 4253, An Narjis, Riyadh 13326</p>
@@ -125,12 +125,13 @@ export const ContactUs = ({
             </div>
           </div>
         ) : (
-          <SlidingDiv className="flex-1 bg-red-500 mb-6 rounded-xl lg:mb-0 lg:rounded-l-4xl lg:rounded-r-none overflow-hidden">
+          <SlidingDiv className="flex-1 relative mb-6 rounded-xl lg:mb-0 lg:rounded-l-4xl lg:rounded-r-none overflow-hidden">
             <img
               src="/contact-banner.jpg"
               alt=""
               className="w-full h-48 md:h-64 lg:h-full object-cover"
             />
+            <div className="absolute inset-0 bg-black/50" />
           </SlidingDiv>
         )}
 
@@ -142,7 +143,7 @@ export const ContactUs = ({
           >
             <div className="mb-6">
               <h4 className="text-white text-lg sm:text-xl font-semibold mb-2">
-                Complete the form below for the demo and pricing details.
+                Fill the form for a demo and pricing details.
               </h4>
             </div>
 

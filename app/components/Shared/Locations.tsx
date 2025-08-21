@@ -6,13 +6,13 @@ export const Locations = () => {
   return (
     <div className="bg-white text-black flex flex-col gap-8 md:gap-12 lg:gap-14 px-4 sm:px-8 md:px-12 lg:px-20 py-16 md:py-24 lg:py-32 items-center">
       <SlidingDiv direction="top" px={10} className="border-[#DCFCE7] bg-[#F0FDF4] border text-xs sm:text-sm tracking-wide rounded-full px-3 md:px-4 py-2 md:py-3 uppercase">
-        We are Global
+        Find us
       </SlidingDiv>
       <SlidingDiv direction="top" px={10} delay={0.1} className="text-3xl sm:text-4xl md:text-5xl text-center">
-        Our Locations
+        Our Location
       </SlidingDiv>
       <SlidingDiv direction="top" px={10} delay={0.2} className="text-center max-w-3xl text-sm sm:text-base md:text-lg lg:text-xl text-neutral-600">
-        {"We have offices and teams all around the world."}
+        {"We are located in KSA, where our dedicated team serves clients"}
       </SlidingDiv>
       <SlidingDiv className="relative w-full">
         <HoverCard defaultOpen>

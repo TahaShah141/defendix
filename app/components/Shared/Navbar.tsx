@@ -4,10 +4,13 @@ import { Menu, X } from "lucide-react";
 import React, { useEffect, useState } from "react";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const pathname = usePathname();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
@@ -41,25 +44,46 @@ export const Navbar = () => {
             scrolled ? "text-black" : "text-white"
           }`}
         >
-          <Link href={"/"} className="hover:opacity-75 transition-opacity">
+          <Link
+            href={"/"}
+            className={`hover:text-green-600 transition-colors ${
+              pathname === "/" ? "text-green-600 font-semibold" : ""
+            }`}
+          >
             Home
           </Link>
-          <Link href={"/about"} className="hover:opacity-75 transition-opacity">
+          <Link
+            href={"/about"}
+            className={`hover:text-green-600 transition-colors ${
+              pathname === "/about" ? "text-green-600 font-semibold" : ""
+            }`}
+          >
             Who we are
           </Link>
           <Link
             href={"/services"}
-            className="hover:opacity-75 transition-opacity"
+            className={`hover:text-green-600 transition-colors ${
+              pathname === "/services" ? "text-green-600 font-semibold" : ""
+            }`}
           >
             What we do
           </Link>
-          <Link href={"/news"} className="hover:opacity-75 transition-opacity">
+          <Link
+            href={"/news"}
+            className={`hover:text-green-600 transition-colors ${
+              pathname === "/news" ? "text-green-600 font-semibold" : ""
+            }`}
+          >
             Resources
           </Link>
           <Link
             href={"/contact"}
             className={`p-2 px-3 rounded-lg transition-colors duration-300 ${
-              scrolled ? "bg-[#167F3D] text-white hover:bg-primary hover:text-black" : "bg-primary text-black hover:bg-white"
+              pathname === "/contact"
+                ? "bg-[#167F3D] text-white"
+                : scrolled
+                ? "bg-[#167F3D] text-white hover:bg-primary hover:text-black"
+                : "bg-primary text-black hover:bg-white"
             }`}
           >
             Contact Us
@@ -86,35 +110,51 @@ export const Navbar = () => {
             <div className="flex flex-col py-4">
               <Link
                 href={"/"}
-                className="px-4 py-3 text-black hover:bg-gray-50 transition-colors"
+                className={`px-4 py-3 hover:bg-gray-50 transition-colors ${
+                  pathname === "/" ? "text-green-600 font-semibold" : "text-black"
+                }`}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Home
               </Link>
               <Link
                 href={"/about"}
-                className="px-4 py-3 text-black hover:bg-gray-50 transition-colors"
+                className={`px-4 py-3 hover:bg-gray-50 transition-colors ${
+                  pathname === "/about"
+                    ? "text-green-600 font-semibold"
+                    : "text-black"
+                }`}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Who we are
               </Link>
               <Link
                 href={"/services"}
-                className="px-4 py-3 text-black hover:bg-gray-50 transition-colors"
+                className={`px-4 py-3 hover:bg-gray-50 transition-colors ${
+                  pathname === "/services"
+                    ? "text-green-600 font-semibold"
+                    : "text-black"
+                }`}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 What we do
               </Link>
               <Link
                 href={"/news"}
-                className="px-4 py-3 text-black hover:bg-gray-50 transition-colors"
+                className={`px-4 py-3 hover:bg-gray-50 transition-colors ${
+                  pathname === "/news" ? "text-green-600 font-semibold" : "text-black"
+                }`}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Resources
               </Link>
               <Link
                 href={"/contact"}
-                className="mx-4 mt-2 p-2 px-3 rounded-lg bg-[#167F3D] text-white text-center"
+                className={`mx-4 mt-2 p-2 px-3 rounded-lg text-center ${
+                  pathname === "/contact"
+                    ? "bg-[#167F3D] text-white"
+                    : "bg-[#167F3D] text-white hover:bg-primary hover:text-black"
+                }`}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Contact Us

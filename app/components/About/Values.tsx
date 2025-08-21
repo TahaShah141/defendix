@@ -16,7 +16,7 @@ type CardProps = {
 };
 
 const Card = ({ icon, title, text }: CardProps) => (
-  <div className="border border-[#ECECEC] flex flex-col gap-4 md:gap-6 p-4 sm:p-6 md:p-8 rounded-2xl lg:rounded-4xl bg-white">
+  <div className="border border-[#ECECEC] flex flex-col gap-4 md:gap-6 p-4 sm:p-6 md:p-8 rounded-2xl lg:rounded-4xl bg-white shadow">
     {icon}
     <p className="text-lg sm:text-xl md:text-2xl font-semibold">{title}</p>
     <p className="text-xs sm:text-sm text-neutral-600">{text}</p>

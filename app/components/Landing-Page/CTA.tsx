@@ -10,7 +10,7 @@ type CTAProps = {
 export const CTA = ({ isProduct = false }: CTAProps) => {
   return (
     <SlidingDiv direction="bottom" className="p-3 sm:p-4 md:p-6 bg-white">
-      <div className="relative overflow-hidden rounded-[40px] sm:rounded-[60px] md:rounded-[80px] lg:rounded-[120px] bg-[#167F3D]">
+      <div className="relative overflow-hidden rounded-[40px] sm:rounded-[60px] md:rounded-[80px] lg:rounded-[100px] bg-[#167F3D]">
         <Image
           src="/cta.jpg"
           alt="Defense background"
@@ -18,7 +18,7 @@ export const CTA = ({ isProduct = false }: CTAProps) => {
           className="object-cover"
         />
         <div
-          className={`absolute inset-0 bg-black/70 rounded-[40px] sm:rounded-[60px] md:rounded-[80px] lg:rounded-[120px]`}
+          className={`absolute inset-0 bg-black/70 rounded-[40px] sm:rounded-[60px] md:rounded-[80px] lg:rounded-[100px]`}
         />
 
         <div className="relative z-10 flex flex-col items-center text-center text-white py-12 sm:py-16 md:py-20 lg:py-[120px] px-6 sm:px-12 md:px-20 lg:px-[120px]">
