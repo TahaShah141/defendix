@@ -146,7 +146,7 @@ const cards: CardProps[] = [
       "Modular & Deployable Systems: Designed for aerial and ground platforms, with integration capability for threat suppression and neutralization missions.",
     ],
     link: "/services/ew",
-    src: "/technologies/warfare.png",
+    src: "/technologies/warfare.jpeg",
     minimalSrc: "/technologies/min_warfare.png",
   },
   {
