@@ -9,8 +9,10 @@ import {
   ShieldCheck,
   Target,
   Zap,
+  ChevronLeft,
+  ChevronRight,
 } from "lucide-react";
-import React, { ReactNode } from "react";
+import React, { ReactNode, useState } from "react";
 
 import Link from "next/link";
 import { SlidingDiv } from "../custom/SlidingDiv";
@@ -70,7 +72,7 @@ const Card = ({
         href={link}
         className="text-[#167F3D] flex font-semibold gap-2 items-center mt-4 md:mt-6 lg:mt-8 text-sm sm:text-base group transition-all duration-300 hover:text-green-700"
       >
-        Learn More
+        Explore More
         <ArrowRight className="w-0 group-hover:w-4 md:group-hover:w-6 transition-all duration-300" />
       </Link>
     </div>
@@ -96,7 +98,7 @@ const MinimalCard = ({ minimalSrc, title, text, link }: CardProps) => {
             className="text-[#87EEAC] flex font-semibold gap-2 items-center mt-3 md:mt-4 lg:mt-6 text-sm sm:text-base group transition-all duration-300 hover:text-green-300"
           >
             Explore More
-          <ArrowRight className="w-0 group-hover:w-5 transition-all duration-300" />
+            <ArrowRight className="w-0 group-hover:w-5 transition-all duration-300" />
           </Link>
         </div>
       </div>
@@ -149,7 +151,7 @@ const cards: CardProps[] = [
     title: "Phased Array Radar",
     text: "Advanced radar technologies with electronic beam steering capabilities",
     points: [
-      "Advanced Electronic Scanning & Control: Radar system engineering and modeling, with beamforming controllers, signal processors, and MMI for precise target detection, tracking, and control without mechanical movement.",
+      "Electronic Scanning & Control: Radar system engineering and modeling, with beamforming controllers, signal processors, and MMI for precise target detection, tracking, and control without mechanical movement.",
       "Advanced T/R Modules & Antennas: In-house developed T/R modules and AESA antennas across S, C, X, and Ku bands for high-performance, platform-specific deployment.",
       "High-Precision Signal Processing: Features beamforming controllers, digital signal processors, and MMI for real-time target tracking, classification, and threat prioritization.",
     ],
@@ -172,34 +174,131 @@ const cards: CardProps[] = [
   },
 ];
 
+const MinimalCarousel = ({ cards }: { cards: CardProps[] }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % cards.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex(
+      (prevIndex) => (prevIndex - 1 + cards.length) % cards.length
+    );
+  };
+
+  return (
+    <div className="w-full lg:hidden relative">
+      <button
+        onClick={prevSlide}
+        className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 backdrop-blur-sm p-3 rounded-full shadow-lg hover:bg-white transition-all duration-200 z-10 hover:scale-105"
+      >
+        <ChevronLeft className="size-6 text-gray-700" />
+      </button>
+      <button
+        onClick={nextSlide}
+        className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 backdrop-blur-sm p-3 rounded-full shadow-lg hover:bg-white transition-all duration-200 z-10 hover:scale-105"
+      >
+        <ChevronRight className="size-6 text-gray-700" />
+      </button>
+
+      <div className="flex justify-center px-16">
+        <div className="relative overflow-hidden w-full max-w-sm">
+          <div
+            className="flex transition-transform duration-500 ease-in-out"
+            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+          >
+            {cards.map((card, i) => (
+              <div key={i} className="w-full flex-shrink-0 flex justify-center">
+                <div
+                  className="flex-1 min-w-[280px] w-full sm:max-w-md aspect-[3/4] bg-cover bg-center rounded-xl md:rounded-2xl overflow-hidden relative"
+                  style={{ backgroundImage: `url(${card.minimalSrc})` }}
+                >
+                  <div className="absolute inset-0 bg-black/40 p-3 md:p-5 flex flex-col justify-end">
+                    <div className="backdrop-blur-md hover:shadow-sm shadow-primary transition-all duration-300 bg-gradient-to-br from-white/5 to-white/10 w-full p-3 md:p-4 rounded-xl md:rounded-2xl border border-white/20 flex flex-col justify-center gap-3 md:gap-4 lg:gap-6 text-white min-h-48 md:min-h-56 lg:min-h-64">
+                      <p className="text-lg sm:text-xl md:text-2xl font-bold">
+                        {card.title}
+                      </p>
+                      <p className="text-sm sm:text-base">{card.text}</p>
+                      <Link
+                        href={card.link}
+                        className="text-[#87EEAC] flex font-semibold gap-2 items-center mt-3 md:mt-4 lg:mt-6 text-sm sm:text-base group transition-all duration-300 hover:text-green-300"
+                      >
+                        Explore More
+                        <ArrowRight className="w-0 group-hover:w-5 transition-all duration-300" />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="flex justify-center mt-8 gap-3">
+        {cards.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => setCurrentIndex(i)}
+            className={`w-3 h-3 rounded-full transition-all duration-300 hover:scale-110 ${
+              i === currentIndex
+                ? "bg-[#167F3D] shadow-md"
+                : "bg-gray-300 hover:bg-gray-400"
+            }`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
+
 export const Technologies = ({ minimal = false }: { minimal?: boolean }) => {
   return (
     <div className="bg-white text-black flex flex-col gap-8 md:gap-12 lg:gap-14 px-4 sm:px-8 md:px-12 lg:px-20 py-16 md:py-24 lg:py-32 items-center">
-      <SlidingDiv direction="top" px={10} className="border-[#DCFCE7] bg-[#F0FDF4] border text-xs sm:text-sm tracking-wide rounded-full px-3 md:px-4 py-2 md:py-3 uppercase">
+      <SlidingDiv
+        direction="top"
+        px={10}
+        className="border-[#DCFCE7] bg-[#F0FDF4] border text-xs sm:text-sm tracking-wide rounded-full px-3 md:px-4 py-2 md:py-3 uppercase"
+      >
         Our Core Technologies
       </SlidingDiv>
-      <SlidingDiv direction="top" px={10} delay={0.1} className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-center">
+      <SlidingDiv
+        direction="top"
+        px={10}
+        delay={0.1}
+        className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-center"
+      >
         Comprehensive Defense Solutions
       </SlidingDiv>
-      <SlidingDiv direction="top" px={10} delay={0.2} className="text-center max-w-3xl text-sm sm:text-base md:text-lg lg:text-xl text-neutral-600">
+      <SlidingDiv
+        direction="top"
+        px={10}
+        delay={0.2}
+        className="text-center max-w-3xl text-sm sm:text-base md:text-lg lg:text-xl text-neutral-600"
+      >
         {
           "Our integrated approach covers all aspects of modern warfare, from command and control to electronic warfare and radar technologies."
         }
       </SlidingDiv>
       {minimal ? (
-        <div className="flex flex-col gap-6 md:gap-8 w-full max-w-7xl">
-          <div className="flex flex-col lg:flex-row gap-4 md:gap-6 lg:gap-8 w-full justify-center items-center">
-            {cards.slice(0, 3).map((c, i) => (
-              <MinimalCard {...c} key={i} />
-            ))}
+        <>
+          <MinimalCarousel cards={cards} />
+
+          <div className="hidden lg:flex flex-col gap-6 md:gap-8 w-full max-w-7xl">
+            <div className="flex flex-col lg:flex-row gap-4 md:gap-6 lg:gap-8 w-full justify-center items-center">
+              {cards.slice(0, 3).map((c, i) => (
+                <MinimalCard {...c} key={i} />
+              ))}
+            </div>
+            <div className="flex overflow-hidden lg:translate-x-1/6 flex-col lg:flex-row gap-4 md:gap-6 lg:gap-8 justify-center items-center">
+              {cards.slice(3).map((c, i) => (
+                <MinimalCard {...c} key={i} />
+              ))}
+              <div className="flex-1 hidden lg:flex h-full bg-red-500" />
+            </div>
           </div>
-          <div className="flex overflow-hidden lg:translate-x-1/6 flex-col lg:flex-row gap-4 md:gap-6 lg:gap-8 justify-center items-center">
-            {cards.slice(3).map((c, i) => (
-              <MinimalCard {...c} key={i} />
-            ))}
-            <div className="flex-1 hidden lg:flex h-full bg-red-500" />
-          </div>
-        </div>
+        </>
       ) : (
         <div className="flex flex-col gap-12 md:gap-16 lg:gap-20 w-full max-w-7xl">
           {cards.map((c, i) => (

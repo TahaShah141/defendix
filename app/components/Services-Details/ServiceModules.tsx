@@ -10,20 +10,24 @@ const Module = ({
   text,
   points,
   src,
-  i
-}: ServiceType["modules"][0] & { flipped: boolean, i: number }) => {
+  i,
+}: ServiceType["modules"][0] & { flipped: boolean; i: number }) => {
   return (
-    <SlidingDiv delay={i*0.01} direction={flipped ? "right" : "left"} className={`flex ${flipped && "lg:justify-end"} px-4 sm:px-8 md:px-0`}>
+    <SlidingDiv
+      delay={i * 0.01}
+      direction={flipped ? "right" : "left"}
+      className={`flex ${flipped && "lg:justify-end"} px-4 sm:px-8 lg:px-0`}
+    >
       <div
-        className={`flex max-w-full lg:max-w-9/10 bg-[#F3F3F3] gap-4 md:gap-8 lg:gap-20 p-4 sm:p-6 md:p-8 lg:p-10 items-center flex-col lg:flex-row ${
+        className={`flex w-full lg:max-w-9/10 bg-[#F3F3F3] gap-4 md:gap-8 lg:gap-20 p-4 sm:p-6 md:p-8 lg:p-10 items-center flex-col lg:flex-row ${
           flipped && "lg:flex-row-reverse"
-        } ${
-          flipped ? "lg:rounded-l-full lg:pr-20" : "lg:rounded-r-full lg:pl-20"
-        } rounded-2xl lg:rounded-none`}
+        } rounded-2xl lg:rounded-3xl ${
+          flipped ? "lg:rounded-r-none" : "lg:rounded-l-none"
+        }`}
       >
-        <div className="flex flex-col gap-4 md:gap-6 flex-1">
+        <div className="flex flex-col gap-4 md:gap-6 flex-1 min-w-0">
           <div className="flex gap-3 md:gap-4 items-center">
-            <div className="size-8 md:size-10 p-1.5 md:p-2 rounded-lg bg-[#167F3D] text-white">
+            <div className="size-8 md:size-10 p-1.5 md:p-2 rounded-lg bg-[#167F3D] text-white flex-shrink-0">
               {icon}
             </div>
             <p className="text-lg sm:text-xl md:text-2xl font-bold">{title}</p>
@@ -42,10 +46,12 @@ const Module = ({
             ))}
           </div>
         </div>
-        <img
-          src={src}
-          className="rounded-2xl lg:rounded-full overflow-hidden object-cover lg:aspect-square w-full lg:max-w-sm"
-        />
+        <div className="w-full lg:w-auto lg:flex-shrink-0">
+          <img
+            src={src}
+            className="rounded-2xl overflow-hidden object-contain w-full lg:w-80 xl:w-96 h-48 sm:h-64 md:h-80 lg:h-72"
+          />
+        </div>
       </div>
     </SlidingDiv>
   );
@@ -60,13 +66,22 @@ export const ServiceModules = ({
 }) => {
   return (
     <div className="bg-white text-black flex flex-col gap-8 md:gap-10 lg:gap-12 py-16 md:py-24 lg:py-32 items-center">
-      <SlidingDiv direction="top" px={10} className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl max-w-5xl px-4 sm:px-8">
+      <SlidingDiv
+        direction="top"
+        px={10}
+        className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl max-w-5xl px-4 sm:px-8"
+      >
         {"Core System Modules"}
       </SlidingDiv>
-      <SlidingDiv direction="top" px={10} delay={0.1} className="text-center max-w-5xl text-sm sm:text-base md:text-lg lg:text-xl text-neutral-600 px-4 sm:px-8">{`Integrated components that form the complete ${hero.title}`}</SlidingDiv>
+      <SlidingDiv
+        direction="top"
+        px={10}
+        delay={0.1}
+        className="text-center max-w-5xl text-sm sm:text-base md:text-lg lg:text-xl text-neutral-600 px-4 sm:px-8"
+      >{`Integrated components that form the complete ${hero.title}`}</SlidingDiv>
       <div className="flex flex-col w-full gap-8 md:gap-10 lg:gap-12">
         {modules.map((m, i) => (
-          <Module {...m} flipped={!!(i % 2)} key={i} i={i}/>
+          <Module {...m} flipped={!!(i % 2)} key={i} i={i} />
         ))}
       </div>
     </div>
