@@ -66,7 +66,7 @@ const NewsCard = ({ article }: { article: (typeof newsArticles)[0] }) => (
 export const News = () => {
   return (
     <div className="bg-white text-black flex flex-col gap-8 md:gap-10 px-4 sm:px-8 md:px-12 lg:px-20 py-16 md:py-24 lg:py-[120px] items-center">
-      <div className="flex flex-col items-center gap-6 md:gap-8 lg:gap-10 mb-6 md:mb-8 lg:mb-10">
+      {/* <div className="flex flex-col items-center gap-6 md:gap-8 lg:gap-10 mb-6 md:mb-8 lg:mb-10">
         <SlidingDiv direction="top" px={10} className="border-[#DCFCE7] bg-[#F0FDF4] border text-xs sm:text-sm tracking-wide rounded-full px-3 md:px-4 py-2 md:py-3 uppercase">
           STAY UPDATED
         </SlidingDiv>
@@ -77,7 +77,7 @@ export const News = () => {
           Explore the latest news, technical articles, and insights from the
           world of defense technology and DefendiX.
         </SlidingDiv>
-      </div>
+      </div> */}
 
       {/* Empty state */}
       <SlidingDiv direction="top" px={10} delay={0.15} className="w-full max-w-4xl">

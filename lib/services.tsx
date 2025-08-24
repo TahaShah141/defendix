@@ -240,7 +240,8 @@ const SDRService: ServiceType = {
     src: "/services/sdr/hero.png",
     pillText: "TACTICAL COMMUNICATIONS",
     title: "Software Defined Radio",
-    text: "Versatile Communication Platform with Dynamic Configuration",
+    // text: "Versatile Communication Platform with Dynamic Configuration",
+    text: "",
   },
   overview: {
     heading: "Versatile Communication Platform with Dynamic Configuration",
@@ -401,7 +402,8 @@ const EWService: ServiceType = {
     src: "/services/ew/hero.png",
     pillText: "ELECTROMAGNETIC SPECTRUM OPERATIONS",
     title: "Electronic Warfare",
-    text: "Detect, Disrupt, Deceive, and Deny Enemy Electronic Systems",
+    // text: "Detect, Disrupt, Deceive, and Deny Enemy Electronic Systems",
+    text: "",
   },
   overview: {
     heading: "Detect, Disrupt, Deceive, and Deny Enemy Electronic Systems",
@@ -474,7 +476,7 @@ const EWService: ServiceType = {
         "Priority-based threat ranking",
         "Threat behavior analysis",
         "Predictive threat modeling",
-        "Multi-sensor data fusion",
+        // "Multi-sensor data fusion",
       ],
     },
     {
@@ -540,10 +542,10 @@ const PARTService: ServiceType = {
     src: "/services/part/hero.png",
     pillText: "ADVANCED RADAR SYSTEMS",
     title: "Phased Array Radar Technologies",
-    text: "Electronic Beam Steering With Multi-Function Capabilities",
+    text: "Turning complex radar challenges into clear focused solutions",
   },
   overview: {
-    heading: "Electronic Beam Steering with Multi-Function Capabilities",
+    heading: "Turning complex radar challenges into clear focused solutions",
     description:
       "Phased Array Radar technologies have revolutionized modern radar systems by enabling multiple functions through electronic beam steering. These functions include simultaneous surveillance, guidance, and tracking by making independent beams for each function. DefendiX team has over a decade of experience in Phased Array Radar technologies, from system design to critical component development.",
     points: [
@@ -704,7 +706,8 @@ const RCPPService: ServiceType = {
     src: "/services/rcpp/hero.png",
     pillText: "HIGH-PERFORMANCE COMPUTING",
     title: "Ruggedized Control and Processing Platforms",
-    text: "OpenVPX-Based Modular Systems for Mission-Critical Applications",
+    // text: "OpenVPX-Based Modular Systems for Mission-Critical Applications",
+    text: "",
   },
   overview: {
     heading: "OpenVPX-Based Modular Systems for Mission-Critical Applications",

@@ -5,10 +5,10 @@ import { SlidingDiv } from "../custom/SlidingDiv";
 
 const Card = ({ icon, points, title }: ServiceType["capabilities"][0]) => {
   return (
-    <div className="p-6 sm:p-8 md:p-10 lg:p-14 flex-1 rounded-2xl md:rounded-3xl border border-[#ECECEC] shadow-xl flex flex-col gap-6 md:gap-8 lg:gap-10">
+    <div className="p-6 sm:p-8 md:p-10 lg:p-14 flex-1 lg:flex-none rounded-2xl md:rounded-3xl border border-[#ECECEC] shadow-xl flex flex-col gap-6 md:gap-8 lg:gap-10">
       <div className="flex gap-2 items-center">
         <div className="size-6 md:size-8">{icon}</div>
-        <p className="text-lg sm:text-xl md:text-2xl font-bold">{title}</p>
+        <p className="text-lg sm:text-xl md:text-2xl font-bold whitespace-nowrap overflow-hidden text-ellipsis">{title}</p>
       </div>
       <div className="flex flex-col gap-2 md:gap-3 lg:gap-4">
         {points.map((p, i) => (
@@ -52,7 +52,7 @@ export const ServiceCapabilities = ({
       <SlidingDiv direction="top" px={10} className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl max-w-5xl">
         {"Technical Capabilities"}
       </SlidingDiv>
-      <SlidingDiv className="flex flex-col lg:flex-row w-full max-w-7xl gap-6 md:gap-8 lg:gap-10">
+      <SlidingDiv className="flex flex-col lg:flex-row lg:flex-wrap lg:justify-center w-full max-w-7xl gap-6 md:gap-8 lg:gap-10">
         {capabilities.map((c, i) => (
           <Card {...c} key={i} />
         ))}

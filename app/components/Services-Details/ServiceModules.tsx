@@ -46,10 +46,10 @@ const Module = ({
             ))}
           </div>
         </div>
-        <div className="w-full lg:w-auto lg:flex-shrink-0">
+        <div className="rounded-2xl overflow-hidden h-full">
           <img
             src={src}
-            className="rounded-2xl overflow-hidden object-contain w-full lg:w-80 xl:w-96 h-48 sm:h-64 md:h-80 lg:h-72"
+            className="max-h-96 h-full max-w-[600px] rounded-2xl overflow-hidden"
           />
         </div>
       </div>

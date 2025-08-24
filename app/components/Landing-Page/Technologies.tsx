@@ -4,13 +4,13 @@ import {
   CheckCheckIcon,
   CheckCircle,
   CheckCircle2,
+  ChevronLeft,
+  ChevronRight,
   HardDrive,
   RadioIcon,
   ShieldCheck,
   Target,
   Zap,
-  ChevronLeft,
-  ChevronRight,
 } from "lucide-react";
 import React, { ReactNode, useState } from "react";
 
@@ -38,7 +38,7 @@ const Card = ({
 }: CardProps & { flipped: boolean }) => (
   <SlidingDiv
     className={`flex flex-col-reverse ${
-      flipped ? "lg:flex-row-reverse" : "lg:flex-row"
+      flipped ? "lg:flex-row-reverse items-center" : "lg:flex-row items-center"
     } gap-8 lg:gap-16 items-center`}
   >
     <div className="flex flex-col gap-4 md:gap-6 lg:gap-8 flex-1">
@@ -76,10 +76,12 @@ const Card = ({
         <ArrowRight className="w-0 group-hover:w-4 md:group-hover:w-6 transition-all duration-300" />
       </Link>
     </div>
-    <img
-      src={src}
-      className="w-full lg:w-auto h-auto max-h-[300px] md:max-h-[400px] lg:max-h-[600px] flex-1 rounded-2xl lg:rounded-4xl overflow-hidden object-cover"
-    />
+    <div className="flex-1 flex justify-center items-center h-96">
+      <img
+        src={src}
+        className="h-full rounded-2xl lg:rounded-4xl overflow-hidden object-cover"
+        />
+    </div>
   </SlidingDiv>
 );
 
@@ -112,7 +114,7 @@ const cards: CardProps[] = [
     title: "C4ISR",
     text: "Command, Control, Communications, Computers, Intelligence, Surveillance & Reconnaissance systems",
     points: [
-      "Multi-Band High Throughput Communication: Operates across VHF to S bands with up to 200 MHz instantaneous bandwidth, supporting simultaneous voice, video, and data transmission.",
+      "Unified Battlespace View: Fuses data from radar, UAVs, EW, and IR sensors to generate a real-time Recognized Air Picture (RAP), tracking up to 10,000 targets simultaneously.",
       "Smart Threat Response: Integrated TEWA system automates threat evaluation and weapon assignment for rapid, optimized engagement.",
       "Interoperable and Scalable Architecture: MIL-STD-compliant architecture ensures seamless, scalable communication across Army, Navy, and Air Force command tiers.",
     ],
