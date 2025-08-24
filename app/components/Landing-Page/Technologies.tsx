@@ -79,7 +79,7 @@ const Card = ({
     <div className="flex-1 flex justify-center items-center h-96">
       <img
         src={src}
-        className="h-full rounded-2xl lg:rounded-4xl overflow-hidden object-cover"
+        className="w-full rounded-2xl lg:rounded-4xl overflow-hidden object-cover"
         />
     </div>
   </SlidingDiv>
