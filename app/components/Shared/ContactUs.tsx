@@ -58,7 +58,7 @@ export const ContactUs = ({
   };
 
   return (
-    <div className="bg-white text-black px-4 sm:px-8 md:px-12 lg:px-20 py-16 md:py-24 lg:py-[120px]">
+    <div className="bg-white text-black px-4 sm:px-8 md:px-12 lg:px-20 py-16 md:py-24 lg:py-[120px] overflow-hidden">
       {showPill && (
         <div className="flex flex-col items-center gap-6 md:gap-8 lg:gap-10 mb-8 md:mb-10">
           <SlidingDiv direction="top" px={10} className="border-[#DCFCE7] bg-[#F0FDF4] border text-xs sm:text-sm tracking-wide rounded-full px-3 md:px-4 py-2 md:py-3 uppercase">

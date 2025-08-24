@@ -85,9 +85,10 @@ const Card = ({
   </SlidingDiv>
 );
 
-const MinimalCard = ({ minimalSrc, title, text, link }: CardProps) => {
+const MinimalCard = ({ minimalSrc, title, text, link, animate=true }: CardProps & { animate?: boolean }) => {
   return (
     <SlidingDiv
+      px={!animate ? 0 : 50}
       className="flex-1 min-w-[280px] w-full sm:max-w-md aspect-[3/4] bg-cover bg-center rounded-xl md:rounded-2xl overflow-hidden relative"
       style={{ backgroundImage: `url(${minimalSrc})` }}
     >
@@ -190,63 +191,40 @@ const MinimalCarousel = ({ cards }: { cards: CardProps[] }) => {
   };
 
   return (
-    <div className="w-full lg:hidden relative">
-      <button
-        onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 backdrop-blur-sm p-3 rounded-full shadow-lg hover:bg-white transition-all duration-200 z-10 hover:scale-105"
-      >
-        <ChevronLeft className="size-6 text-gray-700" />
-      </button>
-      <button
-        onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 backdrop-blur-sm p-3 rounded-full shadow-lg hover:bg-white transition-all duration-200 z-10 hover:scale-105"
-      >
-        <ChevronRight className="size-6 text-gray-700" />
-      </button>
-
-      <div className="flex justify-center px-16">
-        <div className="relative overflow-hidden w-full max-w-sm">
+    <div className="w-full flex flex-col items-center justify-center gap-4">
+      <div className="w-full flex items-center justify-center gap-2">
+        <button
+          onClick={prevSlide}
+          className="p-1 rounded-full bg-neutral-100 hover:bg-neutral-200 z-10"
+        >
+          <ChevronLeft className="size-5" />
+        </button>
+        <div className="w-full max-w-[300px] sm:max-w-[350px] overflow-hidden">
           <div
-            className="flex transition-transform duration-500 ease-in-out"
+            className="flex transition-transform duration-300 ease-in-out"
             style={{ transform: `translateX(-${currentIndex * 100}%)` }}
           >
             {cards.map((card, i) => (
-              <div key={i} className="w-full flex-shrink-0 flex justify-center">
-                <div
-                  className="flex-1 min-w-[280px] w-full sm:max-w-md aspect-[3/4] bg-cover bg-center rounded-xl md:rounded-2xl overflow-hidden relative"
-                  style={{ backgroundImage: `url(${card.minimalSrc})` }}
-                >
-                  <div className="absolute inset-0 bg-black/40 p-3 md:p-5 flex flex-col justify-end">
-                    <div className="backdrop-blur-md hover:shadow-sm shadow-primary transition-all duration-300 bg-gradient-to-br from-white/5 to-white/10 w-full p-3 md:p-4 rounded-xl md:rounded-2xl border border-white/20 flex flex-col justify-center gap-3 md:gap-4 lg:gap-6 text-white min-h-48 md:min-h-56 lg:min-h-64">
-                      <p className="text-lg sm:text-xl md:text-2xl font-bold">
-                        {card.title}
-                      </p>
-                      <p className="text-sm sm:text-base">{card.text}</p>
-                      <Link
-                        href={card.link}
-                        className="text-[#87EEAC] flex font-semibold gap-2 items-center mt-3 md:mt-4 lg:mt-6 text-sm sm:text-base group transition-all duration-300 hover:text-green-300"
-                      >
-                        Explore More
-                        <ArrowRight className="w-0 group-hover:w-5 transition-all duration-300" />
-                      </Link>
-                    </div>
-                  </div>
-                </div>
+              <div className="w-full flex-shrink-0 px-1" key={i}>
+                <MinimalCard {...card} animate={false} />
               </div>
             ))}
           </div>
         </div>
+        <button
+          onClick={nextSlide}
+          className="p-1 rounded-full bg-neutral-100 hover:bg-neutral-200 z-10"
+        >
+          <ChevronRight className="size-5" />
+        </button>
       </div>
-
-      <div className="flex justify-center mt-8 gap-3">
+      <div className="flex justify-center gap-2">
         {cards.map((_, i) => (
           <button
             key={i}
             onClick={() => setCurrentIndex(i)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 hover:scale-110 ${
-              i === currentIndex
-                ? "bg-[#167F3D] shadow-md"
-                : "bg-gray-300 hover:bg-gray-400"
+            className={`w-2 h-2 rounded-full transition-colors ${
+              currentIndex === i ? "bg-neutral-800" : "bg-neutral-300"
             }`}
           />
         ))}
@@ -285,9 +263,11 @@ export const Technologies = ({ minimal = false }: { minimal?: boolean }) => {
       </SlidingDiv>
       {minimal ? (
         <>
-          <MinimalCarousel cards={cards} />
+          <div className="md:hidden w-full">
+            <MinimalCarousel cards={cards} />
+          </div>
 
-          <div className="hidden lg:flex flex-col gap-6 md:gap-8 w-full max-w-7xl">
+          <div className="hidden md:flex flex-col gap-6 md:gap-8 w-full max-w-7xl">
             <div className="flex flex-col lg:flex-row gap-4 md:gap-6 lg:gap-8 w-full justify-center items-center">
               {cards.slice(0, 3).map((c, i) => (
                 <MinimalCard {...c} key={i} />

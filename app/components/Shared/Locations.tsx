@@ -16,15 +16,15 @@ export const Locations = () => {
       </SlidingDiv>
       <SlidingDiv className="relative w-full">
         <HoverCard defaultOpen>
-          <HoverCardTrigger className="absolute top-[49%] left-[61%]">
-            <div className="bg-green-200/50 size-8 rounded-full p-1">
-              <div className="bg-green-300/50 size-full rounded-full p-1.5">
+          <HoverCardTrigger className="absolute top-[50%] left-[62%]">
+            <div className="bg-green-200/50 size-4 md:size-8 rounded-full p-1 -translate-x-1/2 -translate-y-1/2">
+              <div className="bg-green-300/50 size-full rounded-full p-0.5 md:p-1.5">
                 <div className="bg-green-500/80 size-full rounded-full">
                 </div>
               </div>
             </div>
           </HoverCardTrigger>
-          <HoverCardContent side="left" className="flex flex-col gap-2 items-center rounded-3xl">
+          <HoverCardContent side="bottom" className="flex flex-col gap-2 items-center rounded-3xl">
             <img src="/ksa.png" alt="" className="size-10 rounded-full overflow-hidden border" />
             <p className="text-2xl">Riyadh, KSA</p>
             <p className="text-center">7549 Abi Bakr As Siddiq Rd, 4253, An Narjis, Riyadh 13326</p>
