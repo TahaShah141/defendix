@@ -542,7 +542,8 @@ const PARTService: ServiceType = {
     src: "/services/part/hero.png",
     pillText: "ADVANCED RADAR SYSTEMS",
     title: "Phased Array Radar Technologies",
-    text: "Turning complex radar challenges into clear focused solutions",
+    // text: "Turning complex radar challenges into clear focused solutions",
+    text: "",
   },
   overview: {
     heading: "Turning complex radar challenges into clear focused solutions",
