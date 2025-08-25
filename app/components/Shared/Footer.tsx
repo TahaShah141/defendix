@@ -44,7 +44,7 @@ export const Footer = () => {
             href="/services/part"
             className="text-neutral-400 hover:text-white transition-colors text-sm sm:text-base"
           >
-            Phased Array Radar
+            Phased Array Radar Technologies
           </Link>
           <Link
             href="/services/rcpp"
@@ -110,7 +110,7 @@ export const Footer = () => {
 
       <SlidingDiv direction="top" px={10} className="w-full flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-0">
         <p className="text-neutral-400 text-sm sm:text-base">
-          © 2024 DefendiX Technologies. All rights reserved.
+          © DefendiX Technologies. All rights reserved.
         </p>
         {/* <div className="flex gap-4 md:gap-6">
           <Link

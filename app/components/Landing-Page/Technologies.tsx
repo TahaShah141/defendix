@@ -151,7 +151,7 @@ const cards: CardProps[] = [
   },
   {
     icon: <Target className="size-full" />,
-    title: "Phased Array Radar",
+    title: "Phased Array Radar Technologies",
     text: "Advanced radar technologies with electronic beam steering capabilities",
     points: [
       "Electronic Scanning & Control: Radar system engineering and modeling, with beamforming controllers, signal processors, and MMI for precise target detection, tracking, and control without mechanical movement.",
